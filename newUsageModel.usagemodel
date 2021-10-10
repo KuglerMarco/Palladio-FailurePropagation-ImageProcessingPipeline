@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stoex="http://sdq.ipd.uka.de/StochasticExpressions/2.2" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
   <usageScenario_UsageModel id="_Tc9e4Cb9EeynLPSQFkGOPQ" entityName="UsageScenario">
     <scenarioBehaviour_UsageScenario id="_V6bm4Cb9EeynLPSQFkGOPQ" entityName="ScenarioBehaviour">
       <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_V6cN8Cb9EeynLPSQFkGOPQ" successor="_X5TuYCb9EeynLPSQFkGOPQ"/>
@@ -7,6 +7,20 @@
       <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_X5TuYCb9EeynLPSQFkGOPQ" entityName="EntryLevelSystemCall1" successor="_V6cN8Sb9EeynLPSQFkGOPQ" predecessor="_V6cN8Cb9EeynLPSQFkGOPQ">
         <providedRole_EntryLevelSystemCall href="default.system#_mMk1ICb8EeynLPSQFkGOPQ"/>
         <operationSignature__EntryLevelSystemCall href="PcmStandard.repository#_fA0zYCbsEeynLPSQFkGOPQ"/>
+        <inputParameterUsages_EntryLevelSystemCall>
+          <variableCharacterisation_VariableUsage type="BYTESIZE">
+            <specification_VariableCharacterisation specification="12000000"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="image"/>
+        </inputParameterUsages_EntryLevelSystemCall>
+        <inputParameterUsages_EntryLevelSystemCall>
+          <variableCharacterisation_VariableUsage type="VALUE">
+            <specification_VariableCharacterisation specification="DoublePMF[(0.1;0.15)(0.8;0.25)(1.0;0.6)]"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="image">
+            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="Exposure"/>
+          </namedReference__VariableUsage>
+        </inputParameterUsages_EntryLevelSystemCall>
       </actions_ScenarioBehaviour>
     </scenarioBehaviour_UsageScenario>
     <workload_UsageScenario xsi:type="usagemodel:OpenWorkload">
