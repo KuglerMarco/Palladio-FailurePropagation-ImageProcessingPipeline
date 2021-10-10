@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<severityhierarchy:SeverityRepository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:severityhierarchy="http://palladiosimulator.org/severityhierarchy/1.0" id="_svYaYCd2EeyJ9I_d773-6w">
+  <severity id="_tRawcCd2EeyJ9I_d773-6w" entityName="Neglegible"/>
+  <severity id="_vmysYCd2EeyJ9I_d773-6w" entityName="Hazardous"/>
+</severityhierarchy:SeverityRepository>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:emfprofileapplication="http://www.modelversioning.org/emfprofile/application/1.1" xmlns:metricspec="http://palladiosimulator.org/MetricSpec/1.0" xmlns:org.palladiosimulator.qualitygate="http://www.palladiosimulator.org/qualitygateprofile/1.0" xmlns:qualitygate="http://palladiosimulator.org/qualitygate/1.0" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" xmlns:stoex="http://sdq.ipd.uka.de/StochasticExpressions/2.2">
+  <repository:Repository id="_Gzo5EMuwEeOrXJYSTPO-kw" entityName="PcmStandardRepository" repositoryDescription="This projects holds a repository with a set of standard reusable software components and interfaces. These components and interfaces can be used across multiple projects to ease starting modeling.">
+    <components__Repository xsi:type="repository:BasicComponent" id="_UGDZYCnVEeywQ_wyQlQHQw" entityName="Steering Control">
+      <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_m6csgSnVEeywQ_wyQlQHQw"/>
+    </components__Repository>
+    <components__Repository xsi:type="repository:BasicComponent" id="_QrQtgCnVEeywQ_wyQlQHQw" entityName="Vehicle Control">
+      <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_ifx4ASnVEeywQ_wyQlQHQw"/>
+      <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_kVpNdSnVEeywQ_wyQlQHQw"/>
+    </components__Repository>
+    <components__Repository xsi:type="repository:BasicComponent" id="_5hGrkCbVEeynLPSQFkGOPQ" entityName="Trajectory Planning">
+      <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_6TQhQSbVEeynLPSQFkGOPQ" entityName="Provided_ICamera_Camera" providedInterface__OperationProvidedRole="_zDerZybWEeynLPSQFkGOPQ"/>
+      <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_LPYEJybWEeynLPSQFkGOPQ" describedService__SEFF="_NQLo0CbXEeynLPSQFkGOPQ">
+        <steps_Behaviour xsi:type="seff:StartAction" id="_OijFEibWEeynLPSQFkGOPQ" successor_AbstractAction="_mpIZ2SbyEeynLPSQFkGOPQ"/>
+        <steps_Behaviour xsi:type="seff:StopAction" id="_PYToYCbWEeynLPSQFkGOPQ" predecessor_AbstractAction="_WzEJzCbWEeynLPSQFkGOPQ"/>
+        <steps_Behaviour xsi:type="seff:InternalAction" id="_WzEJzCbWEeynLPSQFkGOPQ" entityName="captureImage" predecessor_AbstractAction="_x72WGSe0Eey2vvABLJYRXg" successor_AbstractAction="_PYToYCbWEeynLPSQFkGOPQ">
+          <resourceDemand_Action>
+            <specification_ParametericResourceDemand specification="1.0"/>
+            <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+          </resourceDemand_Action>
+        </steps_Behaviour>
+        <steps_Behaviour xsi:type="seff:SetVariableAction" id="_mpIZ2SbyEeynLPSQFkGOPQ" entityName="setExposureProperty" predecessor_AbstractAction="_OijFEibWEeynLPSQFkGOPQ" successor_AbstractAction="_x72WGSe0Eey2vvABLJYRXg">
+          <localVariableUsages_SetVariableAction>
+            <variableCharacterisation_VariableUsage type="VALUE">
+              <specification_VariableCharacterisation specification="DoublePMF[(0.1;0.15)(0.8;0.25)(1.0;0.6)]"/>
+            </variableCharacterisation_VariableUsage>
+            <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="image">
+              <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="Exposure"/>
+            </namedReference__VariableUsage>
+          </localVariableUsages_SetVariableAction>
+        </steps_Behaviour>
+        <steps_Behaviour xsi:type="seff:SetVariableAction" id="_x72WGSe0Eey2vvABLJYRXg" entityName="setImage" predecessor_AbstractAction="_mpIZ2SbyEeynLPSQFkGOPQ" successor_AbstractAction="_WzEJzCbWEeynLPSQFkGOPQ">
+          <localVariableUsages_SetVariableAction>
+            <variableCharacterisation_VariableUsage type="VALUE">
+              <specification_VariableCharacterisation specification="image.VALUE"/>
+            </variableCharacterisation_VariableUsage>
+            <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="image"/>
+          </localVariableUsages_SetVariableAction>
+        </steps_Behaviour>
+      </serviceEffectSpecifications__BasicComponent>
+    </components__Repository>
+    <components__Repository xsi:type="repository:BasicComponent" id="_27EykCbXEeynLPSQFkGOPQ" entityName="Object Tracking">
+      <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_76J7sSbXEeynLPSQFkGOPQ" providedInterface__OperationProvidedRole="_ue3oCCbnEeynLPSQFkGOPQ"/>
+      <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="__H4b9SbXEeynLPSQFkGOPQ" requiredInterface__OperationRequiredRole="_zDerZybWEeynLPSQFkGOPQ"/>
+      <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_v3PQhybkEeynLPSQFkGOPQ" describedService__SEFF="_zW1cgCbnEeynLPSQFkGOPQ">
+        <steps_Behaviour xsi:type="seff:StartAction" id="_x-SckibkEeynLPSQFkGOPQ" successor_AbstractAction="_zwFKVibkEeynLPSQFkGOPQ"/>
+        <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_zwFKVibkEeynLPSQFkGOPQ" entityName="callTakeImage" predecessor_AbstractAction="_x-SckibkEeynLPSQFkGOPQ" successor_AbstractAction="_HwYoPCbrEeynLPSQFkGOPQ" calledService_ExternalService="_NQLo0CbXEeynLPSQFkGOPQ" role_ExternalService="__H4b9SbXEeynLPSQFkGOPQ">
+          <inputVariableUsages__CallAction>
+            <variableCharacterisation_VariableUsage type="VALUE">
+              <specification_VariableCharacterisation specification="1.0"/>
+            </variableCharacterisation_VariableUsage>
+            <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="image"/>
+          </inputVariableUsages__CallAction>
+          <returnVariableUsage__CallReturnAction>
+            <variableCharacterisation_VariableUsage type="VALUE">
+              <specification_VariableCharacterisation specification="image.Exposure.VALUE"/>
+            </variableCharacterisation_VariableUsage>
+            <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="image">
+              <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="Exposure"/>
+            </namedReference__VariableUsage>
+          </returnVariableUsage__CallReturnAction>
+        </steps_Behaviour>
+        <steps_Behaviour xsi:type="seff:StopAction" id="_9xHxcCbkEeynLPSQFkGOPQ" predecessor_AbstractAction="_HwYoPCbrEeynLPSQFkGOPQ"/>
+        <steps_Behaviour xsi:type="seff:InternalAction" id="_HwYoPCbrEeynLPSQFkGOPQ" entityName="computePreprocessing" predecessor_AbstractAction="_zwFKVibkEeynLPSQFkGOPQ" successor_AbstractAction="_9xHxcCbkEeynLPSQFkGOPQ">
+          <resourceDemand_Action>
+            <specification_ParametericResourceDemand specification="1.0"/>
+            <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+          </resourceDemand_Action>
+        </steps_Behaviour>
+      </serviceEffectSpecifications__BasicComponent>
+    </components__Repository>
+    <components__Repository xsi:type="repository:BasicComponent" id="_vXrUwCbmEeynLPSQFkGOPQ" entityName="Object Detection">
+      <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_zy_pgSbmEeynLPSQFkGOPQ" entityName="Provided_ObjectTracking" providedInterface__OperationProvidedRole="_12pG2CbnEeynLPSQFkGOPQ"/>
+      <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_0w-UtSbmEeynLPSQFkGOPQ" entityName="Required_ObjectTracking" requiredInterface__OperationRequiredRole="_zDerZybWEeynLPSQFkGOPQ"/>
+      <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_1x1UxybmEeynLPSQFkGOPQ" describedService__SEFF="_7Lx_gCbnEeynLPSQFkGOPQ">
+        <steps_Behaviour xsi:type="seff:StartAction" id="_2V3O4ibmEeynLPSQFkGOPQ" successor_AbstractAction="_4RbjtibmEeynLPSQFkGOPQ"/>
+        <steps_Behaviour xsi:type="seff:StopAction" id="_3XsfUCbmEeynLPSQFkGOPQ" predecessor_AbstractAction="_E-jZzCbrEeynLPSQFkGOPQ"/>
+        <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_4RbjtibmEeynLPSQFkGOPQ" entityName="callCamera" predecessor_AbstractAction="_2V3O4ibmEeynLPSQFkGOPQ" successor_AbstractAction="_E-jZzCbrEeynLPSQFkGOPQ" calledService_ExternalService="_NQLo0CbXEeynLPSQFkGOPQ" role_ExternalService="_0w-UtSbmEeynLPSQFkGOPQ">
+          <inputVariableUsages__CallAction>
+            <variableCharacterisation_VariableUsage type="VALUE">
+              <specification_VariableCharacterisation specification="1.0"/>
+            </variableCharacterisation_VariableUsage>
+            <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="image"/>
+          </inputVariableUsages__CallAction>
+          <returnVariableUsage__CallReturnAction>
+            <variableCharacterisation_VariableUsage type="VALUE">
+              <specification_VariableCharacterisation specification="image.Exposure.VALUE"/>
+            </variableCharacterisation_VariableUsage>
+            <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="image">
+              <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="Exposure"/>
+            </namedReference__VariableUsage>
+          </returnVariableUsage__CallReturnAction>
+          <returnVariableUsage__CallReturnAction>
+            <variableCharacterisation_VariableUsage type="VALUE">
+              <specification_VariableCharacterisation specification="image.DEGREE_OF_CORRUPTION.VALUE"/>
+            </variableCharacterisation_VariableUsage>
+            <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="image">
+              <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="DEGREE_OF_CORRUPTION"/>
+            </namedReference__VariableUsage>
+          </returnVariableUsage__CallReturnAction>
+        </steps_Behaviour>
+        <steps_Behaviour xsi:type="seff:InternalAction" id="_E-jZzCbrEeynLPSQFkGOPQ" entityName="computeTracking" predecessor_AbstractAction="_4RbjtibmEeynLPSQFkGOPQ" successor_AbstractAction="_3XsfUCbmEeynLPSQFkGOPQ">
+          <resourceDemand_Action>
+            <specification_ParametericResourceDemand specification="1 / image.Exposure.VALUE * 10.0"/>
+            <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+          </resourceDemand_Action>
+        </steps_Behaviour>
+      </serviceEffectSpecifications__BasicComponent>
+    </components__Repository>
+    <components__Repository xsi:type="repository:BasicComponent" id="_5l_i6SbmEeynLPSQFkGOPQ" entityName="Camera">
+      <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_-9XQMSbmEeynLPSQFkGOPQ" entityName="Provided_VehicleControl" providedInterface__OperationProvidedRole="_cnMCiCbsEeynLPSQFkGOPQ"/>
+      <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="__gM3hSbmEeynLPSQFkGOPQ" entityName="Required_VehicleControl" requiredInterface__OperationRequiredRole="_12pG2CbnEeynLPSQFkGOPQ"/>
+      <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_AipL9ybnEeynLPSQFkGOPQ" describedService__SEFF="_fA0zYCbsEeynLPSQFkGOPQ">
+        <steps_Behaviour xsi:type="seff:StartAction" id="_BJfJgibnEeynLPSQFkGOPQ" successor_AbstractAction="_pAC0SyhaEeyzG5CX5i96zg"/>
+        <steps_Behaviour xsi:type="seff:StopAction" id="_D5Aq0CbnEeynLPSQFkGOPQ" predecessor_AbstractAction="_I4gG3CbrEeynLPSQFkGOPQ"/>
+        <steps_Behaviour xsi:type="seff:InternalAction" id="_I4gG3CbrEeynLPSQFkGOPQ" entityName="computeControl" predecessor_AbstractAction="_RftR8SnEEeywQ_wyQlQHQw" successor_AbstractAction="_D5Aq0CbnEeynLPSQFkGOPQ">
+          <resourceDemand_Action>
+            <specification_ParametericResourceDemand specification="1.0"/>
+            <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+          </resourceDemand_Action>
+        </steps_Behaviour>
+        <steps_Behaviour xsi:type="seff:InternalAction" id="_pAC0SyhaEeyzG5CX5i96zg" entityName="testEventBased" predecessor_AbstractAction="_BJfJgibnEeynLPSQFkGOPQ" successor_AbstractAction="_RftR8SnEEeywQ_wyQlQHQw">
+          <resourceDemand_Action>
+            <specification_ParametericResourceDemand specification="DoublePMF[(20.0;0.15)(30.0;0.25)(1.0;0.6)]"/>
+            <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+          </resourceDemand_Action>
+        </steps_Behaviour>
+        <steps_Behaviour xsi:type="seff:ForkAction" id="_RftR8SnEEeywQ_wyQlQHQw" predecessor_AbstractAction="_pAC0SyhaEeyzG5CX5i96zg" successor_AbstractAction="_I4gG3CbrEeynLPSQFkGOPQ">
+          <asynchronousForkedBehaviours_ForkAction id="_XeIYMSnEEeywQ_wyQlQHQw">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_ZKJ1IinEEeywQ_wyQlQHQw" successor_AbstractAction="_Z4p55inEEeywQ_wyQlQHQw"/>
+            <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_Z4p55inEEeywQ_wyQlQHQw" entityName="callTrack" predecessor_AbstractAction="_ZKJ1IinEEeywQ_wyQlQHQw" successor_AbstractAction="_hVPnQCnEEeywQ_wyQlQHQw" calledService_ExternalService="_7Lx_gCbnEeynLPSQFkGOPQ" role_ExternalService="__gM3hSbmEeynLPSQFkGOPQ"/>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_hVPnQCnEEeywQ_wyQlQHQw" predecessor_AbstractAction="_Z4p55inEEeywQ_wyQlQHQw"/>
+          </asynchronousForkedBehaviours_ForkAction>
+        </steps_Behaviour>
+      </serviceEffectSpecifications__BasicComponent>
+    </components__Repository>
+    <interfaces__Repository xsi:type="repository:OperationInterface" id="_H-m3YMuwEeOrXJYSTPO-kw" entityName="IRequest">
+      <signatures__OperationInterface id="_JcqJwMuwEeOrXJYSTPO-kw" entityName="processRequest">
+        <parameters__OperationSignature parameterName="requestType">
+          <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+        </parameters__OperationSignature>
+        <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+      </signatures__OperationInterface>
+    </interfaces__Repository>
+    <interfaces__Repository xsi:type="repository:OperationInterface" id="_zDerZybWEeynLPSQFkGOPQ" entityName="ICamera">
+      <signatures__OperationInterface id="_NQLo0CbXEeynLPSQFkGOPQ" entityName="takeImage">
+        <parameters__OperationSignature parameterName="image">
+          <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+        </parameters__OperationSignature>
+        <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+      </signatures__OperationInterface>
+    </interfaces__Repository>
+    <interfaces__Repository xsi:type="repository:OperationInterface" id="_ue3oCCbnEeynLPSQFkGOPQ" entityName="IPreprocessing">
+      <signatures__OperationInterface id="_zW1cgCbnEeynLPSQFkGOPQ" entityName="preprocess">
+        <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+      </signatures__OperationInterface>
+    </interfaces__Repository>
+    <interfaces__Repository xsi:type="repository:OperationInterface" id="_12pG2CbnEeynLPSQFkGOPQ" entityName="IObjectTracking">
+      <signatures__OperationInterface id="_7Lx_gCbnEeynLPSQFkGOPQ" entityName="trackObject">
+        <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+      </signatures__OperationInterface>
+    </interfaces__Repository>
+    <interfaces__Repository xsi:type="repository:OperationInterface" id="_cnMCiCbsEeynLPSQFkGOPQ" entityName="IVehicleControl">
+      <signatures__OperationInterface id="_fA0zYCbsEeynLPSQFkGOPQ" entityName="controlVehicle">
+        <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+      </signatures__OperationInterface>
+    </interfaces__Repository>
+  </repository:Repository>
+  <emfprofileapplication:ProfileApplication>
+    <stereotypeApplications xsi:type="org.palladiosimulator.qualitygate:QualitygateElement" appliedTo="_-9XQMSbmEeynLPSQFkGOPQ">
+      <extension href="../org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram#_HKHIQBLoEeyoI8sXJPqmjw"/>
+      <qualitygate id="_9I0xACdVEeyuUIRyylrW7Q" entityName="Processing Time Vehicle Control">
+        <scope xsi:type="qualitygate:RequestMetricScope" id="_-BjIwidVEeyuUIRyylrW7Q" signature="_fA0zYCbsEeynLPSQFkGOPQ">
+          <metric xsi:type="metricspec:MetricSetDescription" href="pathmap://METRIC_SPEC_MODELS/commonMetrics.metricspec#_mZb3MdoLEeO-WvSDaR6unQ"/>
+        </scope>
+        <predicate specification="ResponseTimeTuple.VALUE &lt; 0.0025"/>
+        <severity href="My.severityhierarchy#_tRawcCd2EeyJ9I_d773-6w"/>
+      </qualitygate>
+      <qualitygate id="_0D_UwChYEeyXG6ilA9VPuw">
+        <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_0VnQRChYEeyXG6ilA9VPuw" signature="_fA0zYCbsEeynLPSQFkGOPQ" qualitygate="_eg3pMChmEeyDpqErIT0d1w"/>
+        <predicate specification="Start.TYPE"/>
+      </qualitygate>
+      <qualitygate id="_uAfeACkYEeynM_ozLbNrTQ" entityName="aName1">
+        <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_u4L7ASkYEeynM_ozLbNrTQ" signature="_fA0zYCbsEeynLPSQFkGOPQ" qualitygate="_w24cUCkYEeynM_ozLbNrTQ"/>
+        <predicate specification="Start.TYPE"/>
+      </qualitygate>
+    </stereotypeApplications>
+    <stereotypeApplications xsi:type="org.palladiosimulator.qualitygate:QualitygateElement" appliedTo="_0w-UtSbmEeynLPSQFkGOPQ">
+      <extension href="../org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram#_HKGhNBLoEeyoI8sXJPqmjw"/>
+      <qualitygate id="_hBkQAClFEeyIGoKuFfm1nw" entityName="Resp Time Tracking">
+        <scope xsi:type="qualitygate:RequestMetricScope" id="_lmtPIilFEeyIGoKuFfm1nw" signature="_NQLo0CbXEeynLPSQFkGOPQ">
+          <metric xsi:type="metricspec:MetricSetDescription" href="pathmap://METRIC_SPEC_MODELS/commonMetrics.metricspec#_mZb3MdoLEeO-WvSDaR6unQ"/>
+        </scope>
+        <predicate specification="ResponseTimeTuple.VALUE &lt; 1.0E-5"/>
+      </qualitygate>
+    </stereotypeApplications>
+    <stereotypeApplications xsi:type="org.palladiosimulator.qualitygate:QualitygateElement" appliedTo="_6TQhQSbVEeynLPSQFkGOPQ">
+      <extension href="../org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram#_HKHIQBLoEeyoI8sXJPqmjw"/>
+      <qualitygate id="_eg3pMChmEeyDpqErIT0d1w" entityName="Camera">
+        <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_fY-89ChmEeyDpqErIT0d1w" signature="_NQLo0CbXEeynLPSQFkGOPQ" qualitygate="_0D_UwChYEeyXG6ilA9VPuw"/>
+        <predicate specification="Stop.TYPE &lt; 1.0E-6"/>
+      </qualitygate>
+      <qualitygate id="_jVKfwClEEeyIGoKuFfm1nw" entityName="degCorruption Provided">
+        <scope xsi:type="qualitygate:ResultParameterScope" id="_j7RdgSlEEeyIGoKuFfm1nw" signature="_NQLo0CbXEeynLPSQFkGOPQ"/>
+        <predicate specification="image.DEGREE_OF_CORRUPTION.VALUE &lt; 0.2"/>
+      </qualitygate>
+    </stereotypeApplications>
+    <stereotypeApplications xsi:type="org.palladiosimulator.qualitygate:QualitygateElement" appliedTo="_zy_pgSbmEeynLPSQFkGOPQ">
+      <extension href="../org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram#_HKHIQBLoEeyoI8sXJPqmjw"/>
+      <qualitygate id="_w24cUCkYEeynM_ozLbNrTQ" entityName="aName2">
+        <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_1-AHJCkYEeynM_ozLbNrTQ" signature="_7Lx_gCbnEeynLPSQFkGOPQ" qualitygate="_uAfeACkYEeynM_ozLbNrTQ"/>
+        <predicate specification="Stop.TYPE &lt; 0.001"/>
+      </qualitygate>
+      <qualitygate id="_looaYClIEey_7tOee2nAZg" entityName="aName123">
+        <scope xsi:type="qualitygate:RequestMetricScope" id="_mpFx0ilIEey_7tOee2nAZg" signature="_7Lx_gCbnEeynLPSQFkGOPQ">
+          <metric xsi:type="metricspec:MetricSetDescription" href="pathmap://METRIC_SPEC_MODELS/commonMetrics.metricspec#_mZb3MdoLEeO-WvSDaR6unQ"/>
+        </scope>
+        <predicate specification="ResponseTimeTuple.VALUE &lt; 1.0E-4"/>
+      </qualitygate>
+    </stereotypeApplications>
+    <importedProfiles nsURI="http://www.palladiosimulator.org/qualitygateprofile/1.0" location="platform:/resource/org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram"/>
+  </emfprofileapplication:ProfileApplication>
+</xmi:XMI>

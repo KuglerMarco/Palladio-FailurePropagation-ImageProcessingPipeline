@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:composition="http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:system="http://palladiosimulator.org/PalladioComponentModel/System/5.2" id="_MuZKkCb8EeynLPSQFkGOPQ" entityName="defaultSystem">
+  <assemblyContexts__ComposedStructure id="_SU4R8Cb8EeynLPSQFkGOPQ" entityName="Assembly_Vehicle Control &lt;Vehicle Control>">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="PcmStandard.repository#_5l_i6SbmEeynLPSQFkGOPQ"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_VvVmoCb8EeynLPSQFkGOPQ" entityName="Assembly_Object Tracking &lt;Object Tracking>">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="PcmStandard.repository#_vXrUwCbmEeynLPSQFkGOPQ"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_cUVksCb8EeynLPSQFkGOPQ" entityName="Assembly_Camera &lt;Camera>">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="PcmStandard.repository#_5hGrkCbVEeynLPSQFkGOPQ"/>
+  </assemblyContexts__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_iZb6sCb8EeynLPSQFkGOPQ" entityName="Connector Assembly_Vehicle Control &lt;Vehicle Control> -> Assembly_Object Tracking &lt;Object Tracking>" requiringAssemblyContext_AssemblyConnector="_SU4R8Cb8EeynLPSQFkGOPQ" providingAssemblyContext_AssemblyConnector="_VvVmoCb8EeynLPSQFkGOPQ">
+    <providedRole_AssemblyConnector href="PcmStandard.repository#_zy_pgSbmEeynLPSQFkGOPQ"/>
+    <requiredRole_AssemblyConnector href="PcmStandard.repository#__gM3hSbmEeynLPSQFkGOPQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_jTknsCb8EeynLPSQFkGOPQ" entityName="Connector Assembly_Object Tracking &lt;Object Tracking> -> Assembly_Camera &lt;Camera>" requiringAssemblyContext_AssemblyConnector="_VvVmoCb8EeynLPSQFkGOPQ" providingAssemblyContext_AssemblyConnector="_cUVksCb8EeynLPSQFkGOPQ">
+    <providedRole_AssemblyConnector href="PcmStandard.repository#_6TQhQSbVEeynLPSQFkGOPQ"/>
+    <requiredRole_AssemblyConnector href="PcmStandard.repository#_0w-UtSbmEeynLPSQFkGOPQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_vH9bwCb8EeynLPSQFkGOPQ" entityName="ProvDelegation Provided_IVehicleControl -> Provided_VehicleControl" outerProvidedRole_ProvidedDelegationConnector="_mMk1ICb8EeynLPSQFkGOPQ" assemblyContext_ProvidedDelegationConnector="_SU4R8Cb8EeynLPSQFkGOPQ">
+    <innerProvidedRole_ProvidedDelegationConnector href="PcmStandard.repository#_-9XQMSbmEeynLPSQFkGOPQ"/>
+  </connectors__ComposedStructure>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_mMk1ICb8EeynLPSQFkGOPQ" entityName="Provided_IVehicleControl">
+    <providedInterface__OperationProvidedRole href="PcmStandard.repository#_cnMCiCbsEeynLPSQFkGOPQ"/>
+  </providedRoles_InterfaceProvidingEntity>
+</system:System>

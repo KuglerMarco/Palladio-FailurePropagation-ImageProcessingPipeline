@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<allocation:Allocation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:allocation="http://palladiosimulator.org/PalladioComponentModel/Allocation/5.2" id="_GYQ5gCb9EeynLPSQFkGOPQ" entityName="defaultAllocation">
+  <targetResourceEnvironment_Allocation href="default.resourceenvironment#/"/>
+  <system_Allocation href="default.system#_MuZKkCb8EeynLPSQFkGOPQ"/>
+  <allocationContexts_Allocation id="_IhPYMCb9EeynLPSQFkGOPQ" entityName="Allocation_Assembly_Camera &lt;Camera> &lt;Camera>">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#_qS9oMCerEey2vvABLJYRXg"/>
+    <assemblyContext_AllocationContext href="default.system#_cUVksCb8EeynLPSQFkGOPQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_JiKpsCb9EeynLPSQFkGOPQ" entityName="Allocation_Assembly_Object Tracking &lt;Object Tracking> &lt;Object Tracking>">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#_1Ujg4Cb8EeynLPSQFkGOPQ"/>
+    <assemblyContext_AllocationContext href="default.system#_VvVmoCb8EeynLPSQFkGOPQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_KId0sCb9EeynLPSQFkGOPQ" entityName="Allocation_Assembly_Vehicle Control &lt;Vehicle Control> &lt;Vehicle Control>">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#_1Ujg4Cb8EeynLPSQFkGOPQ"/>
+    <assemblyContext_AllocationContext href="default.system#_SU4R8Cb8EeynLPSQFkGOPQ"/>
+  </allocationContexts_Allocation>
+</allocation:Allocation>

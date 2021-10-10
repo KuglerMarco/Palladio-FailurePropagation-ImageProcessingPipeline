@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.palladiosimulator.edp2.models:MeasuringPointRepository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.palladiosimulator.edp2.models="http://palladiosimulator.org/EDP2/MeasuringPoint/1.0" xmlns:qualitygatemeasuringpoint="http://palladiosimulator.org/qualitygatemeasuringpoint/1.0" id="_-lJQkCb-EeynLPSQFkGOPQ">
+  <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Processing Time Vehicle Control" resourceURIRepresentation="_9I0xACdVEeyuUIRyylrW7Q">
+    <qualitygate href="PcmStandard.repository#_9I0xACdVEeyuUIRyylrW7Q"/>
+  </measuringPoints>
+  <measuringPoints xsi:type="qualitygatemeasuringpoint:SeverityMeasuringPoint" stringRepresentation="SeverityOfBrokenQualitygates" resourceURIRepresentation="defaultSystem">
+    <system href="default.system#_MuZKkCb8EeynLPSQFkGOPQ"/>
+  </measuringPoints>
+  <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="aName" resourceURIRepresentation="_4DMRMylIEey_7tOee2nAZg">
+    <qualitygate href="PcmStandard.repository#_ILPKYCeqEey2vvABLJYRXg"/>
+  </measuringPoints>
+  <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="aName" resourceURIRepresentation="_0D_UwChYEeyXG6ilA9VPuw">
+    <qualitygate href="PcmStandard.repository#_0D_UwChYEeyXG6ilA9VPuw"/>
+  </measuringPoints>
+  <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="aName" resourceURIRepresentation="_4DMRNSlIEey_7tOee2nAZg">
+    <qualitygate href="PcmStandard.repository#_ySBA0ChYEeyXG6ilA9VPuw"/>
+  </measuringPoints>
+  <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Camera" resourceURIRepresentation="_eg3pMChmEeyDpqErIT0d1w">
+    <qualitygate href="PcmStandard.repository#_eg3pMChmEeyDpqErIT0d1w"/>
+  </measuringPoints>
+  <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="aName1" resourceURIRepresentation="_uAfeACkYEeynM_ozLbNrTQ">
+    <qualitygate href="PcmStandard.repository#_uAfeACkYEeynM_ozLbNrTQ"/>
+  </measuringPoints>
+  <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="aName2" resourceURIRepresentation="_w24cUCkYEeynM_ozLbNrTQ">
+    <qualitygate href="PcmStandard.repository#_w24cUCkYEeynM_ozLbNrTQ"/>
+  </measuringPoints>
+  <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="degCorruption Provided" resourceURIRepresentation="_jVKfwClEEeyIGoKuFfm1nw">
+    <qualitygate href="PcmStandard.repository#_jVKfwClEEeyIGoKuFfm1nw"/>
+  </measuringPoints>
+  <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Resp Time Tracking" resourceURIRepresentation="_hBkQAClFEeyIGoKuFfm1nw">
+    <qualitygate href="PcmStandard.repository#_hBkQAClFEeyIGoKuFfm1nw"/>
+  </measuringPoints>
+  <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="aName123" resourceURIRepresentation="_looaYClIEey_7tOee2nAZg">
+    <qualitygate href="PcmStandard.repository#_looaYClIEey_7tOee2nAZg"/>
+  </measuringPoints>
+</org.palladiosimulator.edp2.models:MeasuringPointRepository>
