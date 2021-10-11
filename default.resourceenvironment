@@ -3,22 +3,50 @@
   <linkingResources__ResourceEnvironment id="_55xlACerEey2vvABLJYRXg" connectedResourceContainers_LinkingResource="_qS9oMCerEey2vvABLJYRXg _1Ujg4Cb8EeynLPSQFkGOPQ">
     <communicationLinkResourceSpecifications_LinkingResource id="_556u8CerEey2vvABLJYRXg">
       <communicationLinkResourceType_CommunicationLinkResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_o3sScH2AEdyH8uerKnHYug"/>
-      <latency_CommunicationLinkResourceSpecification specification="0.0"/>
-      <throughput_CommunicationLinkResourceSpecification specification="1000.0"/>
+      <latency_CommunicationLinkResourceSpecification specification="0"/>
+      <throughput_CommunicationLinkResourceSpecification specification="1000000000"/>
     </communicationLinkResourceSpecifications_LinkingResource>
   </linkingResources__ResourceEnvironment>
-  <resourceContainer_ResourceEnvironment id="_1Ujg4Cb8EeynLPSQFkGOPQ" entityName="ResourceContainer">
+  <linkingResources__ResourceEnvironment id="_I6Wy0CoeEeyOt9411N9dxQ" connectedResourceContainers_LinkingResource="_CFhB8CoeEeyOt9411N9dxQ _1Ujg4Cb8EeynLPSQFkGOPQ">
+    <communicationLinkResourceSpecifications_LinkingResource id="_I6XZ4CoeEeyOt9411N9dxQ">
+      <communicationLinkResourceType_CommunicationLinkResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_o3sScH2AEdyH8uerKnHYug"/>
+      <latency_CommunicationLinkResourceSpecification specification="0"/>
+      <throughput_CommunicationLinkResourceSpecification specification="1000000000"/>
+    </communicationLinkResourceSpecifications_LinkingResource>
+  </linkingResources__ResourceEnvironment>
+  <linkingResources__ResourceEnvironment id="_MV7h0CoeEeyOt9411N9dxQ" connectedResourceContainers_LinkingResource="_CFhB8CoeEeyOt9411N9dxQ _EuQl0CoeEeyOt9411N9dxQ">
+    <communicationLinkResourceSpecifications_LinkingResource id="_MV8I4CoeEeyOt9411N9dxQ">
+      <communicationLinkResourceType_CommunicationLinkResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_o3sScH2AEdyH8uerKnHYug"/>
+      <latency_CommunicationLinkResourceSpecification specification="0"/>
+      <throughput_CommunicationLinkResourceSpecification specification="1000000000"/>
+    </communicationLinkResourceSpecifications_LinkingResource>
+  </linkingResources__ResourceEnvironment>
+  <resourceContainer_ResourceEnvironment id="_1Ujg4Cb8EeynLPSQFkGOPQ" entityName="Perception">
     <activeResourceSpecifications_ResourceContainer id="_5bSswCb8EeynLPSQFkGOPQ">
       <schedulingPolicy href="pathmap://PCM_MODELS/Palladio.resourcetype#ProcessorSharing"/>
       <activeResourceType_ActiveResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
-      <processingRate_ProcessingResourceSpecification specification="10000.0"/>
+      <processingRate_ProcessingResourceSpecification specification="1000"/>
     </activeResourceSpecifications_ResourceContainer>
   </resourceContainer_ResourceEnvironment>
-  <resourceContainer_ResourceEnvironment id="_qS9oMCerEey2vvABLJYRXg" entityName="Camera">
+  <resourceContainer_ResourceEnvironment id="_qS9oMCerEey2vvABLJYRXg" entityName="Sensoring">
     <activeResourceSpecifications_ResourceContainer id="_s-jEsCerEey2vvABLJYRXg">
       <schedulingPolicy href="pathmap://PCM_MODELS/Palladio.resourcetype#ProcessorSharing"/>
       <activeResourceType_ActiveResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
-      <processingRate_ProcessingResourceSpecification specification="10000.0"/>
+      <processingRate_ProcessingResourceSpecification specification="1000"/>
+    </activeResourceSpecifications_ResourceContainer>
+  </resourceContainer_ResourceEnvironment>
+  <resourceContainer_ResourceEnvironment id="_CFhB8CoeEeyOt9411N9dxQ" entityName="Planning">
+    <activeResourceSpecifications_ResourceContainer id="_R8F5ECoeEeyOt9411N9dxQ">
+      <schedulingPolicy href="pathmap://PCM_MODELS/Palladio.resourcetype#ProcessorSharing"/>
+      <activeResourceType_ActiveResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+      <processingRate_ProcessingResourceSpecification specification="1000"/>
+    </activeResourceSpecifications_ResourceContainer>
+  </resourceContainer_ResourceEnvironment>
+  <resourceContainer_ResourceEnvironment id="_EuQl0CoeEeyOt9411N9dxQ" entityName="Control">
+    <activeResourceSpecifications_ResourceContainer id="_T1x-kCoeEeyOt9411N9dxQ">
+      <schedulingPolicy href="pathmap://PCM_MODELS/Palladio.resourcetype#ProcessorSharing"/>
+      <activeResourceType_ActiveResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+      <processingRate_ProcessingResourceSpecification specification="1000"/>
     </activeResourceSpecifications_ResourceContainer>
   </resourceContainer_ResourceEnvironment>
 </resourceenvironment:ResourceEnvironment>

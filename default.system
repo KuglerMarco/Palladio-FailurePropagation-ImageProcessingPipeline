@@ -1,26 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <system:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:composition="http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:system="http://palladiosimulator.org/PalladioComponentModel/System/5.2" id="_MuZKkCb8EeynLPSQFkGOPQ" entityName="defaultSystem">
-  <assemblyContexts__ComposedStructure id="_SU4R8Cb8EeynLPSQFkGOPQ" entityName="Assembly_Vehicle Control &lt;Vehicle Control>">
+  <assemblyContexts__ComposedStructure id="_IHDUICn-EeywQ_wyQlQHQw" entityName="Assembly_Camera &lt;Camera>">
     <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="PcmStandard.repository#_5l_i6SbmEeynLPSQFkGOPQ"/>
   </assemblyContexts__ComposedStructure>
-  <assemblyContexts__ComposedStructure id="_VvVmoCb8EeynLPSQFkGOPQ" entityName="Assembly_Object Tracking &lt;Object Tracking>">
+  <assemblyContexts__ComposedStructure id="_Mu4a4Cn-EeywQ_wyQlQHQw" entityName="Assembly_Object Detection &lt;Object Detection>">
     <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="PcmStandard.repository#_vXrUwCbmEeynLPSQFkGOPQ"/>
   </assemblyContexts__ComposedStructure>
-  <assemblyContexts__ComposedStructure id="_cUVksCb8EeynLPSQFkGOPQ" entityName="Assembly_Camera &lt;Camera>">
+  <assemblyContexts__ComposedStructure id="_Pz2AsCn-EeywQ_wyQlQHQw" entityName="Assembly_Object Tracking &lt;Object Tracking>">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="PcmStandard.repository#_27EykCbXEeynLPSQFkGOPQ"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_T-fcMCn-EeywQ_wyQlQHQw" entityName="Assembly_Trajectory Planning &lt;Trajectory Planning>">
     <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="PcmStandard.repository#_5hGrkCbVEeynLPSQFkGOPQ"/>
   </assemblyContexts__ComposedStructure>
-  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_iZb6sCb8EeynLPSQFkGOPQ" entityName="Connector Assembly_Vehicle Control &lt;Vehicle Control> -> Assembly_Object Tracking &lt;Object Tracking>" requiringAssemblyContext_AssemblyConnector="_SU4R8Cb8EeynLPSQFkGOPQ" providingAssemblyContext_AssemblyConnector="_VvVmoCb8EeynLPSQFkGOPQ">
+  <assemblyContexts__ComposedStructure id="_a6XpMCn-EeywQ_wyQlQHQw" entityName="Assembly_Vehicle Control &lt;Vehicle Control>">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="PcmStandard.repository#_QrQtgCnVEeywQ_wyQlQHQw"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_ecqEMCn-EeywQ_wyQlQHQw" entityName="Assembly_Braking Control &lt;Braking Control>">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="PcmStandard.repository#_UGDZYCnVEeywQ_wyQlQHQw"/>
+  </assemblyContexts__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_j9UQYCn-EeywQ_wyQlQHQw" entityName="Connector Assembly_Vehicle Control &lt;Vehicle Control> -> Assembly_Braking Control &lt;Braking Control>" requiringAssemblyContext_AssemblyConnector="_a6XpMCn-EeywQ_wyQlQHQw" providingAssemblyContext_AssemblyConnector="_ecqEMCn-EeywQ_wyQlQHQw">
+    <providedRole_AssemblyConnector href="PcmStandard.repository#_m6csgSnVEeywQ_wyQlQHQw"/>
+    <requiredRole_AssemblyConnector href="PcmStandard.repository#_kVpNdSnVEeywQ_wyQlQHQw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_kdgzYCn-EeywQ_wyQlQHQw" entityName="Connector Assembly_Trajectory Planning &lt;Trajectory Planning> -> Assembly_Vehicle Control &lt;Vehicle Control>" requiringAssemblyContext_AssemblyConnector="_T-fcMCn-EeywQ_wyQlQHQw" providingAssemblyContext_AssemblyConnector="_a6XpMCn-EeywQ_wyQlQHQw">
+    <providedRole_AssemblyConnector href="PcmStandard.repository#_ifx4ASnVEeywQ_wyQlQHQw"/>
+    <requiredRole_AssemblyConnector href="PcmStandard.repository#_gSvShSnyEeywQ_wyQlQHQw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_kwv4cCn-EeywQ_wyQlQHQw" entityName="Connector Assembly_Object Tracking &lt;Object Tracking> -> Assembly_Trajectory Planning &lt;Trajectory Planning>" requiringAssemblyContext_AssemblyConnector="_Pz2AsCn-EeywQ_wyQlQHQw" providingAssemblyContext_AssemblyConnector="_T-fcMCn-EeywQ_wyQlQHQw">
+    <providedRole_AssemblyConnector href="PcmStandard.repository#_6TQhQSbVEeynLPSQFkGOPQ"/>
+    <requiredRole_AssemblyConnector href="PcmStandard.repository#__H4b9SbXEeynLPSQFkGOPQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_lu3GgCn-EeywQ_wyQlQHQw" entityName="Connector Assembly_Object Detection &lt;Object Detection> -> Assembly_Object Tracking &lt;Object Tracking>" requiringAssemblyContext_AssemblyConnector="_Mu4a4Cn-EeywQ_wyQlQHQw" providingAssemblyContext_AssemblyConnector="_Pz2AsCn-EeywQ_wyQlQHQw">
+    <providedRole_AssemblyConnector href="PcmStandard.repository#_76J7sSbXEeynLPSQFkGOPQ"/>
+    <requiredRole_AssemblyConnector href="PcmStandard.repository#_0w-UtSbmEeynLPSQFkGOPQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_mRX9sCn-EeywQ_wyQlQHQw" entityName="Connector Assembly_Camera &lt;Camera> -> Assembly_Object Detection &lt;Object Detection>" requiringAssemblyContext_AssemblyConnector="_IHDUICn-EeywQ_wyQlQHQw" providingAssemblyContext_AssemblyConnector="_Mu4a4Cn-EeywQ_wyQlQHQw">
     <providedRole_AssemblyConnector href="PcmStandard.repository#_zy_pgSbmEeynLPSQFkGOPQ"/>
     <requiredRole_AssemblyConnector href="PcmStandard.repository#__gM3hSbmEeynLPSQFkGOPQ"/>
   </connectors__ComposedStructure>
-  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_jTknsCb8EeynLPSQFkGOPQ" entityName="Connector Assembly_Object Tracking &lt;Object Tracking> -> Assembly_Camera &lt;Camera>" requiringAssemblyContext_AssemblyConnector="_VvVmoCb8EeynLPSQFkGOPQ" providingAssemblyContext_AssemblyConnector="_cUVksCb8EeynLPSQFkGOPQ">
-    <providedRole_AssemblyConnector href="PcmStandard.repository#_6TQhQSbVEeynLPSQFkGOPQ"/>
-    <requiredRole_AssemblyConnector href="PcmStandard.repository#_0w-UtSbmEeynLPSQFkGOPQ"/>
-  </connectors__ComposedStructure>
-  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_vH9bwCb8EeynLPSQFkGOPQ" entityName="ProvDelegation Provided_IVehicleControl -> Provided_VehicleControl" outerProvidedRole_ProvidedDelegationConnector="_mMk1ICb8EeynLPSQFkGOPQ" assemblyContext_ProvidedDelegationConnector="_SU4R8Cb8EeynLPSQFkGOPQ">
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_pir9cCn-EeywQ_wyQlQHQw" entityName="ProvDelegation Provided_ICamera -> Provided_Camera" outerProvidedRole_ProvidedDelegationConnector="_mMk1ICb8EeynLPSQFkGOPQ" assemblyContext_ProvidedDelegationConnector="_IHDUICn-EeywQ_wyQlQHQw">
     <innerProvidedRole_ProvidedDelegationConnector href="PcmStandard.repository#_-9XQMSbmEeynLPSQFkGOPQ"/>
   </connectors__ComposedStructure>
-  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_mMk1ICb8EeynLPSQFkGOPQ" entityName="Provided_IVehicleControl">
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_mMk1ICb8EeynLPSQFkGOPQ" entityName="Provided_ICamera">
     <providedInterface__OperationProvidedRole href="PcmStandard.repository#_cnMCiCbsEeynLPSQFkGOPQ"/>
   </providedRoles_InterfaceProvidingEntity>
 </system:System>
