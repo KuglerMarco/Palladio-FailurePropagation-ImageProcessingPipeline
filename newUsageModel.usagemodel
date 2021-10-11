@@ -15,7 +15,7 @@
         </inputParameterUsages_EntryLevelSystemCall>
         <inputParameterUsages_EntryLevelSystemCall>
           <variableCharacterisation_VariableUsage type="VALUE">
-            <specification_VariableCharacterisation specification="DoublePMF[(0.1;0.15)(0.8;0.25)(1.0;0.6)]"/>
+            <specification_VariableCharacterisation specification="DoublePMF[(0.1;0.15)(0.25;0.25)(1.0;0.6)]"/>
           </variableCharacterisation_VariableUsage>
           <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="image">
             <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="Exposure"/>
@@ -24,7 +24,7 @@
       </actions_ScenarioBehaviour>
     </scenarioBehaviour_UsageScenario>
     <workload_UsageScenario xsi:type="usagemodel:OpenWorkload">
-      <interArrivalTime_OpenWorkload specification="1.0"/>
+      <interArrivalTime_OpenWorkload specification="0.07"/>
     </workload_UsageScenario>
   </usageScenario_UsageModel>
 </usagemodel:UsageModel>

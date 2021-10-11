@@ -18,4 +18,13 @@
   <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Camera Provided-Required" resourceURIRepresentation="_U8a84ComEeyOt9411N9dxQ">
     <qualitygate href="PcmStandard.repository#_U8a84ComEeyOt9411N9dxQ"/>
   </measuringPoints>
+  <measuringPoints xsi:type="qualitygatemeasuringpoint:SeverityMeasuringPoint" stringRepresentation="SeverityOfBrokenQualitygates" resourceURIRepresentation="defaultSystem">
+    <system href="default.system#_MuZKkCb8EeynLPSQFkGOPQ"/>
+  </measuringPoints>
+  <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Processing Time Detection Provided-Required" resourceURIRepresentation="_XxqdgCqbEeypNakyw_-KQQ">
+    <qualitygate href="PcmStandard.repository#_XxqdgCqbEeypNakyw_-KQQ"/>
+  </measuringPoints>
+  <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Processing Time Detection Provided-Required Start" resourceURIRepresentation="_vOcYYCqYEeyjGvjPg6NQ1w">
+    <qualitygate href="PcmStandard.repository#_vOcYYCqYEeyjGvjPg6NQ1w"/>
+  </measuringPoints>
 </org.palladiosimulator.edp2.models:MeasuringPointRepository>

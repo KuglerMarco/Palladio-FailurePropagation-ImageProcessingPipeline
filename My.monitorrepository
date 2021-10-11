@@ -42,4 +42,25 @@
     </measurementSpecifications>
     <measuringPoint xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" href="My.measuringpoint#//@measuringPoints.4"/>
   </monitors>
+  <monitors id="_oPCacCqREey_87ccuV1alw">
+    <measurementSpecifications id="_ogn5sCqREey_87ccuV1alw" triggersSelfAdaptations="false">
+      <metricDescription xsi:type="metricspec:TextualBaseMetricDescription" href="../../plugin/org.palladiosimulator.simulizar.qualitygate/model/qualitygate.metricspec#_bnYmwAf9Eey9TNWaDr7jMQ"/>
+      <processingType xsi:type="monitorrepository:FeedThrough" id="_r7v8wCqREey_87ccuV1alw"/>
+    </measurementSpecifications>
+    <measuringPoint xsi:type="qualitygatemeasuringpoint:SeverityMeasuringPoint" href="My.measuringpoint#//@measuringPoints.6"/>
+  </monitors>
+  <monitors id="_aVugQCqcEeypNakyw_-KQQ">
+    <measurementSpecifications id="_ajf2gCqcEeypNakyw_-KQQ" triggersSelfAdaptations="false">
+      <metricDescription xsi:type="metricspec:TextualBaseMetricDescription" href="../../plugin/org.palladiosimulator.simulizar.qualitygate/model/qualitygate.metricspec#_biPckAJhEeyupI8CZJs1wg"/>
+      <processingType xsi:type="monitorrepository:FeedThrough" id="_dqL6oCqcEeypNakyw_-KQQ"/>
+    </measurementSpecifications>
+    <measuringPoint xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" href="My.measuringpoint#//@measuringPoints.8"/>
+  </monitors>
+  <monitors id="_dwrkMCqcEeypNakyw_-KQQ">
+    <measurementSpecifications id="_eojAUCqcEeypNakyw_-KQQ" triggersSelfAdaptations="false">
+      <metricDescription xsi:type="metricspec:TextualBaseMetricDescription" href="../../plugin/org.palladiosimulator.simulizar.qualitygate/model/qualitygate.metricspec#_biPckAJhEeyupI8CZJs1wg"/>
+      <processingType xsi:type="monitorrepository:FeedThrough" id="_fz_fwCqcEeypNakyw_-KQQ"/>
+    </measurementSpecifications>
+    <measuringPoint xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" href="My.measuringpoint#//@measuringPoints.7"/>
+  </monitors>
 </monitorrepository:MonitorRepository>
