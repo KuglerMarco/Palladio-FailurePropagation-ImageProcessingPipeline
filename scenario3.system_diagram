@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" type="CompositeModel" name="scenario3.system_diagram" measurementUnit="Pixel">
+  <children xsi:type="notation:Shape" type="2002" fontName="Segoe UI">
+    <children xsi:type="notation:DecorationNode" type="5012"/>
+    <children xsi:type="notation:DecorationNode" type="7002">
+      <children xsi:type="notation:Shape" type="3006" fontName="Segoe UI">
+        <children xsi:type="notation:DecorationNode" type="5009"/>
+        <children xsi:type="notation:Shape" type="3007" fontName="Segoe UI">
+          <children xsi:type="notation:DecorationNode" type="5007">
+            <layoutConstraint xsi:type="notation:Location" y="5"/>
+          </children>
+          <element href="PcmStandard.repository#_-9XQMSbmEeynLPSQFkGOPQ"/>
+          <layoutConstraint xsi:type="notation:Bounds"/>
+        </children>
+        <children xsi:type="notation:Shape" type="3008" fontName="Segoe UI">
+          <children xsi:type="notation:DecorationNode" type="5008">
+            <layoutConstraint xsi:type="notation:Location" y="5"/>
+          </children>
+          <element href="PcmStandard.repository#__gM3hSbmEeynLPSQFkGOPQ"/>
+          <layoutConstraint xsi:type="notation:Bounds"/>
+        </children>
+        <element href="scenario3.system#_5CGgkCulEeydvZe_YhdkLw"/>
+        <layoutConstraint xsi:type="notation:Bounds" x="79" y="115"/>
+      </children>
+      <children xsi:type="notation:Shape" type="3006" fontName="Segoe UI">
+        <children xsi:type="notation:DecorationNode" type="5009"/>
+        <children xsi:type="notation:Shape" type="3007" fontName="Segoe UI">
+          <children xsi:type="notation:DecorationNode" type="5007">
+            <layoutConstraint xsi:type="notation:Location" y="5"/>
+          </children>
+          <element href="PcmStandard.repository#_Y5KAcSugEeydvZe_YhdkLw"/>
+          <layoutConstraint xsi:type="notation:Bounds"/>
+        </children>
+        <children xsi:type="notation:Shape" type="3008" fontName="Segoe UI">
+          <children xsi:type="notation:DecorationNode" type="5008">
+            <layoutConstraint xsi:type="notation:Location" y="5"/>
+          </children>
+          <element href="PcmStandard.repository#_ZUlYMiugEeydvZe_YhdkLw"/>
+          <layoutConstraint xsi:type="notation:Bounds"/>
+        </children>
+        <element href="scenario3.system#_9tYj8CulEeydvZe_YhdkLw"/>
+        <layoutConstraint xsi:type="notation:Bounds" x="96" y="307"/>
+      </children>
+      <children xsi:type="notation:Shape" type="3006" fontName="Segoe UI">
+        <children xsi:type="notation:DecorationNode" type="5009"/>
+        <children xsi:type="notation:Shape" type="3007" fontName="Segoe UI">
+          <children xsi:type="notation:DecorationNode" type="5007">
+            <layoutConstraint xsi:type="notation:Location" x="15" y="82"/>
+          </children>
+          <element href="PcmStandard.repository#_76J7sSbXEeynLPSQFkGOPQ"/>
+          <layoutConstraint xsi:type="notation:Bounds"/>
+        </children>
+        <children xsi:type="notation:Shape" type="3008" fontName="Segoe UI">
+          <children xsi:type="notation:DecorationNode" type="5008">
+            <layoutConstraint xsi:type="notation:Location" y="5"/>
+          </children>
+          <element href="PcmStandard.repository#__H4b9SbXEeynLPSQFkGOPQ"/>
+          <layoutConstraint xsi:type="notation:Bounds"/>
+        </children>
+        <element href="scenario3.system#_CTHY8CumEeydvZe_YhdkLw"/>
+        <layoutConstraint xsi:type="notation:Bounds" x="866" y="225"/>
+      </children>
+      <children xsi:type="notation:Shape" type="3006" fontName="Segoe UI">
+        <children xsi:type="notation:DecorationNode" type="5009"/>
+        <children xsi:type="notation:Shape" type="3007" fontName="Segoe UI">
+          <children xsi:type="notation:DecorationNode" type="5007">
+            <layoutConstraint xsi:type="notation:Location" y="5"/>
+          </children>
+          <element href="PcmStandard.repository#_6TQhQSbVEeynLPSQFkGOPQ"/>
+          <layoutConstraint xsi:type="notation:Bounds"/>
+        </children>
+        <children xsi:type="notation:Shape" type="3008" fontName="Segoe UI">
+          <children xsi:type="notation:DecorationNode" type="5008">
+            <layoutConstraint xsi:type="notation:Location" y="5"/>
+          </children>
+          <element href="PcmStandard.repository#_gSvShSnyEeywQ_wyQlQHQw"/>
+          <layoutConstraint xsi:type="notation:Bounds"/>
+        </children>
+        <element href="scenario3.system#_FMmukCumEeydvZe_YhdkLw"/>
+        <layoutConstraint xsi:type="notation:Bounds" x="1155" y="230"/>
+      </children>
+      <children xsi:type="notation:Shape" type="3006" fontName="Segoe UI">
+        <children xsi:type="notation:DecorationNode" type="5009"/>
+        <children xsi:type="notation:Shape" type="3007" fontName="Segoe UI">
+          <children xsi:type="notation:DecorationNode" type="5007">
+            <layoutConstraint xsi:type="notation:Location" y="5"/>
+          </children>
+          <element href="PcmStandard.repository#_ifx4ASnVEeywQ_wyQlQHQw"/>
+          <layoutConstraint xsi:type="notation:Bounds"/>
+        </children>
+        <children xsi:type="notation:Shape" type="3008" fontName="Segoe UI">
+          <children xsi:type="notation:DecorationNode" type="5008">
+            <layoutConstraint xsi:type="notation:Location" y="5"/>
+          </children>
+          <element href="PcmStandard.repository#_kVpNdSnVEeywQ_wyQlQHQw"/>
+          <layoutConstraint xsi:type="notation:Bounds"/>
+        </children>
+        <element href="scenario3.system#_Gp8PQCumEeydvZe_YhdkLw"/>
+        <layoutConstraint xsi:type="notation:Bounds" x="1450" y="240"/>
+      </children>
+      <children xsi:type="notation:Shape" type="3006" fontName="Segoe UI">
+        <children xsi:type="notation:DecorationNode" type="5009"/>
+        <children xsi:type="notation:Shape" type="3007" fontName="Segoe UI">
+          <children xsi:type="notation:DecorationNode" type="5007">
+            <layoutConstraint xsi:type="notation:Location" y="5"/>
+          </children>
+          <element href="PcmStandard.repository#_m6csgSnVEeywQ_wyQlQHQw"/>
+          <layoutConstraint xsi:type="notation:Bounds"/>
+        </children>
+        <element href="scenario3.system#_NFIxECumEeydvZe_YhdkLw"/>
+        <layoutConstraint xsi:type="notation:Bounds" x="1810" y="250"/>
+      </children>
+      <children xsi:type="notation:Shape" type="3006" fontName="Segoe UI">
+        <children xsi:type="notation:DecorationNode" type="5009"/>
+        <children xsi:type="notation:Shape" type="3007" fontName="Segoe UI">
+          <children xsi:type="notation:DecorationNode" type="5007">
+            <layoutConstraint xsi:type="notation:Location" y="5"/>
+          </children>
+          <element href="PcmStandard.repository#_Rgq5gSusEeydvZe_YhdkLw"/>
+          <layoutConstraint xsi:type="notation:Bounds" x="-29" y="5"/>
+        </children>
+        <children xsi:type="notation:Shape" type="3007" fontName="Segoe UI">
+          <children xsi:type="notation:DecorationNode" type="5007">
+            <layoutConstraint xsi:type="notation:Location" y="5"/>
+          </children>
+          <element href="PcmStandard.repository#_Cc6fESuvEeydvZe_YhdkLw"/>
+          <layoutConstraint xsi:type="notation:Bounds"/>
+        </children>
+        <children xsi:type="notation:Shape" type="3008" fontName="Segoe UI">
+          <children xsi:type="notation:DecorationNode" type="5008">
+            <layoutConstraint xsi:type="notation:Location" x="59" y="72"/>
+          </children>
+          <element href="PcmStandard.repository#_TLbyNSusEeydvZe_YhdkLw"/>
+          <layoutConstraint xsi:type="notation:Bounds"/>
+        </children>
+        <element href="scenario3.system#_x5TUECu0EeydvZe_YhdkLw"/>
+        <layoutConstraint xsi:type="notation:Bounds" x="441" y="235"/>
+      </children>
+      <children xsi:type="notation:Shape" type="3006" fontName="Segoe UI">
+        <children xsi:type="notation:DecorationNode" type="5009"/>
+        <children xsi:type="notation:Shape" type="3007" fontName="Segoe UI">
+          <children xsi:type="notation:DecorationNode" type="5007">
+            <layoutConstraint xsi:type="notation:Location" y="5"/>
+          </children>
+          <element href="PcmStandard.repository#_zy_pgSbmEeynLPSQFkGOPQ"/>
+          <layoutConstraint xsi:type="notation:Bounds"/>
+        </children>
+        <children xsi:type="notation:Shape" type="3008" fontName="Segoe UI">
+          <children xsi:type="notation:DecorationNode" type="5008">
+            <layoutConstraint xsi:type="notation:Location" x="142" y="52"/>
+          </children>
+          <element href="PcmStandard.repository#_0w-UtSbmEeynLPSQFkGOPQ"/>
+          <layoutConstraint xsi:type="notation:Bounds"/>
+        </children>
+        <element href="scenario3.system#_50dMwCu0EeydvZe_YhdkLw"/>
+        <layoutConstraint xsi:type="notation:Bounds" x="651" y="225"/>
+      </children>
+    </children>
+    <children xsi:type="notation:Shape" type="3011" fontName="Segoe UI">
+      <children xsi:type="notation:DecorationNode" type="5013">
+        <layoutConstraint xsi:type="notation:Location" y="5"/>
+      </children>
+      <element href="scenario3.system#_TkrAUCumEeydvZe_YhdkLw"/>
+      <layoutConstraint xsi:type="notation:Bounds" x="-59" y="195"/>
+    </children>
+    <children xsi:type="notation:Shape" type="3011" fontName="Segoe UI">
+      <children xsi:type="notation:DecorationNode" type="5013">
+        <layoutConstraint xsi:type="notation:Location" y="5"/>
+      </children>
+      <element href="scenario3.system#_Vros0CumEeydvZe_YhdkLw"/>
+      <layoutConstraint xsi:type="notation:Bounds" x="-59" y="390"/>
+    </children>
+    <element href="scenario3.system#_4hLk0CulEeydvZe_YhdkLw"/>
+    <layoutConstraint xsi:type="notation:Bounds" x="95" y="-20" width="2100" height="846"/>
+  </children>
+  <styles xsi:type="notation:DiagramStyle"/>
+  <element href="scenario3.system#_4hLk0CulEeydvZe_YhdkLw"/>
+  <edges xsi:type="notation:Connector" type="4004" source="//@children.0/@children.1/@children.2/@children.2" target="//@children.0/@children.1/@children.3/@children.1">
+    <styles xsi:type="notation:FontStyle" fontName="Segoe UI"/>
+    <element href="scenario3.system#_Rf_y0CumEeydvZe_YhdkLw"/>
+    <bendpoints xsi:type="notation:RelativeBendpoints" points="[4, 0, -117, 2]$[119, -2, -2, 0]"/>
+    <targetAnchor xsi:type="notation:IdentityAnchor" id="(0.13333333333333333,0.5)"/>
+  </edges>
+  <edges xsi:type="notation:Connector" type="4004" source="//@children.0/@children.1/@children.3/@children.2" target="//@children.0/@children.1/@children.4/@children.1">
+    <styles xsi:type="notation:FontStyle" fontName="Segoe UI"/>
+    <element href="scenario3.system#_SK_3oCumEeydvZe_YhdkLw"/>
+    <bendpoints xsi:type="notation:RelativeBendpoints" points="[4, 0, -53, -4]$[56, 3, -1, -1]"/>
+    <targetAnchor xsi:type="notation:IdentityAnchor" id="(0.03333333333333333,0.43333333333333335)"/>
+  </edges>
+  <edges xsi:type="notation:Connector" type="4004" source="//@children.0/@children.1/@children.4/@children.2" target="//@children.0/@children.1/@children.5/@children.1">
+    <styles xsi:type="notation:FontStyle" fontName="Segoe UI"/>
+    <element href="scenario3.system#_SgIaICumEeydvZe_YhdkLw"/>
+    <bendpoints xsi:type="notation:RelativeBendpoints" points="[3, 0, -93, -5]$[94, 6, -2, 1]"/>
+    <sourceAnchor xsi:type="notation:IdentityAnchor" id="(0.43333333333333335,0.23333333333333334)"/>
+  </edges>
+  <edges xsi:type="notation:Connector" type="4006" source="//@children.0/@children.2" target="//@children.0/@children.1/@children.0/@children.1">
+    <styles xsi:type="notation:FontStyle" fontName="Segoe UI"/>
+    <element href="scenario3.system#_isJVwCumEeydvZe_YhdkLw"/>
+    <bendpoints xsi:type="notation:RelativeBendpoints" points="[15, 0, -34, 5]$[50, -5, 1, 0]"/>
+    <sourceAnchor xsi:type="notation:IdentityAnchor" id="(0.8,0.4166666666666667)"/>
+  </edges>
+  <edges xsi:type="notation:Connector" type="4006" source="//@children.0/@children.3" target="//@children.0/@children.1/@children.1/@children.1">
+    <styles xsi:type="notation:FontStyle" fontName="Segoe UI"/>
+    <element href="scenario3.system#_kHAxQCumEeydvZe_YhdkLw"/>
+    <bendpoints xsi:type="notation:RelativeBendpoints" points="[15, 0, -43, 7]$[58, -7, 0, 0]"/>
+    <sourceAnchor xsi:type="notation:IdentityAnchor" id="(0.8,0.4666666666666667)"/>
+  </edges>
+  <edges xsi:type="notation:Connector" type="4004" source="//@children.0/@children.1/@children.1/@children.2" target="//@children.0/@children.1/@children.6/@children.2">
+    <styles xsi:type="notation:FontStyle" fontName="Segoe UI"/>
+    <element href="scenario3.system#_1ouMICu0EeydvZe_YhdkLw"/>
+    <bendpoints xsi:type="notation:RelativeBendpoints" points="[5, 0, -117, 53]$[121, -53, -1, 0]"/>
+    <targetAnchor xsi:type="notation:IdentityAnchor" id="(0.03333333333333333,0.5333333333333333)"/>
+  </edges>
+  <edges xsi:type="notation:Connector" type="4004" source="//@children.0/@children.1/@children.0/@children.2" target="//@children.0/@children.1/@children.6/@children.1">
+    <styles xsi:type="notation:FontStyle" fontName="Segoe UI"/>
+    <element href="scenario3.system#_1-SzgCu0EeydvZe_YhdkLw"/>
+    <bendpoints xsi:type="notation:RelativeBendpoints" points="[5, 0, -141, -64]$[144, 66, -2, 2]"/>
+  </edges>
+  <edges xsi:type="notation:Connector" type="4004" source="//@children.0/@children.1/@children.6/@children.3" target="//@children.0/@children.1/@children.7/@children.1">
+    <styles xsi:type="notation:FontStyle" fontName="Segoe UI"/>
+    <element href="scenario3.system#_7cceQCu0EeydvZe_YhdkLw"/>
+    <bendpoints xsi:type="notation:RelativeBendpoints" points="[5, 0, -26, 8]$[31, -7, 0, 1]"/>
+  </edges>
+  <edges xsi:type="notation:Connector" type="4004" source="//@children.0/@children.1/@children.7/@children.2" target="//@children.0/@children.1/@children.2/@children.1">
+    <styles xsi:type="notation:FontStyle" fontName="Segoe UI"/>
+    <element href="scenario3.system#_84iBwCu0EeydvZe_YhdkLw"/>
+    <bendpoints xsi:type="notation:RelativeBendpoints" points="[5, 0, -30, 6]$[36, -11, 1, -5]"/>
+    <targetAnchor xsi:type="notation:IdentityAnchor" id="(0.5,0.2)"/>
+  </edges>
+</notation:Diagram>

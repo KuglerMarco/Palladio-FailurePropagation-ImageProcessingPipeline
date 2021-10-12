@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ASCII"?>
+<allocation:Allocation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:allocation="http://palladiosimulator.org/PalladioComponentModel/Allocation/5.2" id="_9CglgCumEeydvZe_YhdkLw" entityName="New Allocation">
+  <targetResourceEnvironment_Allocation href="default.resourceenvironment#/"/>
+  <system_Allocation href="scenario3.system#_4hLk0CulEeydvZe_YhdkLw"/>
+  <allocationContexts_Allocation id="_UySNgCunEeydvZe_YhdkLw">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#_qS9oMCerEey2vvABLJYRXg"/>
+    <assemblyContext_AllocationContext href="scenario3.system#_5CGgkCulEeydvZe_YhdkLw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_mHGkQCunEeydvZe_YhdkLw">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#_QHItASunEeydvZe_YhdkLw"/>
+    <assemblyContext_AllocationContext href="scenario3.system#_9tYj8CulEeydvZe_YhdkLw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_pKWS0CunEeydvZe_YhdkLw">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#_1Ujg4Cb8EeynLPSQFkGOPQ"/>
+    <assemblyContext_AllocationContext href="scenario3.system#_CTHY8CumEeydvZe_YhdkLw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_qoBxwCunEeydvZe_YhdkLw">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#_CFhB8CoeEeyOt9411N9dxQ"/>
+    <assemblyContext_AllocationContext href="scenario3.system#_Gp8PQCumEeydvZe_YhdkLw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_Vwj-MCuoEeydvZe_YhdkLw">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#_CFhB8CoeEeyOt9411N9dxQ"/>
+    <assemblyContext_AllocationContext href="scenario3.system#_NFIxECumEeydvZe_YhdkLw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_7DDkUCuoEeydvZe_YhdkLw">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#_1Ujg4Cb8EeynLPSQFkGOPQ"/>
+    <assemblyContext_AllocationContext href="scenario3.system#_FMmukCumEeydvZe_YhdkLw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_Wy-xkCu1EeydvZe_YhdkLw">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#_1Ujg4Cb8EeynLPSQFkGOPQ"/>
+    <assemblyContext_AllocationContext href="scenario3.system#_x5TUECu0EeydvZe_YhdkLw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_jw2WMCu1EeydvZe_YhdkLw">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#_1Ujg4Cb8EeynLPSQFkGOPQ"/>
+    <assemblyContext_AllocationContext href="scenario3.system#_50dMwCu0EeydvZe_YhdkLw"/>
+  </allocationContexts_Allocation>
+</allocation:Allocation>

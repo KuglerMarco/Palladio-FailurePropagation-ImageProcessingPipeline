@@ -14,6 +14,13 @@
       <throughput_CommunicationLinkResourceSpecification specification="100000"/>
     </communicationLinkResourceSpecifications_LinkingResource>
   </linkingResources__ResourceEnvironment>
+  <linkingResources__ResourceEnvironment id="_buLMICuoEeydvZe_YhdkLw" connectedResourceContainers_LinkingResource="_QHItASunEeydvZe_YhdkLw _1Ujg4Cb8EeynLPSQFkGOPQ">
+    <communicationLinkResourceSpecifications_LinkingResource id="_cDAMoCuoEeydvZe_YhdkLw">
+      <communicationLinkResourceType_CommunicationLinkResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_o3sScH2AEdyH8uerKnHYug"/>
+      <latency_CommunicationLinkResourceSpecification specification="0.005"/>
+      <throughput_CommunicationLinkResourceSpecification specification="100000"/>
+    </communicationLinkResourceSpecifications_LinkingResource>
+  </linkingResources__ResourceEnvironment>
   <resourceContainer_ResourceEnvironment id="_1Ujg4Cb8EeynLPSQFkGOPQ" entityName="Processing">
     <activeResourceSpecifications_ResourceContainer id="_5bSswCb8EeynLPSQFkGOPQ" numberOfReplicas="4">
       <schedulingPolicy href="pathmap://PCM_MODELS/Palladio.resourcetype#ProcessorSharing"/>
@@ -30,6 +37,13 @@
   </resourceContainer_ResourceEnvironment>
   <resourceContainer_ResourceEnvironment id="_CFhB8CoeEeyOt9411N9dxQ" entityName="Actuator">
     <activeResourceSpecifications_ResourceContainer id="_R8F5ECoeEeyOt9411N9dxQ" numberOfReplicas="4">
+      <schedulingPolicy href="pathmap://PCM_MODELS/Palladio.resourcetype#ProcessorSharing"/>
+      <activeResourceType_ActiveResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+      <processingRate_ProcessingResourceSpecification specification="1000"/>
+    </activeResourceSpecifications_ResourceContainer>
+  </resourceContainer_ResourceEnvironment>
+  <resourceContainer_ResourceEnvironment id="_QHItASunEeydvZe_YhdkLw" entityName="Lidar">
+    <activeResourceSpecifications_ResourceContainer id="_QbhooCunEeydvZe_YhdkLw">
       <schedulingPolicy href="pathmap://PCM_MODELS/Palladio.resourcetype#ProcessorSharing"/>
       <activeResourceType_ActiveResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
       <processingRate_ProcessingResourceSpecification specification="1000"/>

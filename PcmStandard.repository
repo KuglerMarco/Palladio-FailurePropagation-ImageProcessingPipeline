@@ -184,23 +184,124 @@
         </steps_Behaviour>
       </serviceEffectSpecifications__BasicComponent>
     </components__Repository>
+    <components__Repository xsi:type="repository:BasicComponent" id="_QaNAsCusEeydvZe_YhdkLw" entityName="Sensor Fusion">
+      <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_Rgq5gSusEeydvZe_YhdkLw" entityName="Provided_SensorFusion_Camera" providedInterface__OperationProvidedRole="_12pG2CbnEeynLPSQFkGOPQ"/>
+      <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_Cc6fESuvEeydvZe_YhdkLw" entityName="Provided_SensorFusion_Lidar" providedInterface__OperationProvidedRole="_12pG2CbnEeynLPSQFkGOPQ"/>
+      <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_TLbyNSusEeydvZe_YhdkLw" entityName="Required_IObjectDetection_SensorFusion" requiredInterface__OperationRequiredRole="_12pG2CbnEeynLPSQFkGOPQ"/>
+      <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_TvVJdyusEeydvZe_YhdkLw" describedService__SEFF="_7Lx_gCbnEeynLPSQFkGOPQ">
+        <steps_Behaviour xsi:type="seff:StartAction" id="_Ugx0giusEeydvZe_YhdkLw" successor_AbstractAction="_zBjPMSusEeydvZe_YhdkLw"/>
+        <steps_Behaviour xsi:type="seff:StopAction" id="_VofqgCusEeydvZe_YhdkLw" predecessor_AbstractAction="_zBjPMSusEeydvZe_YhdkLw"/>
+        <steps_Behaviour xsi:type="seff:BranchAction" id="_zBjPMSusEeydvZe_YhdkLw" entityName="branchFusion" predecessor_AbstractAction="_Ugx0giusEeydvZe_YhdkLw" successor_AbstractAction="_VofqgCusEeydvZe_YhdkLw">
+          <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_z8xhUyusEeydvZe_YhdkLw">
+            <branchBehaviour_BranchTransition id="_18YooCusEeydvZe_YhdkLw">
+              <steps_Behaviour xsi:type="seff:StartAction" id="_8-0woiusEeydvZe_YhdkLw" successor_AbstractAction="_-Gva_CusEeydvZe_YhdkLw"/>
+              <steps_Behaviour xsi:type="seff:StopAction" id="_9l6l0CusEeydvZe_YhdkLw" predecessor_AbstractAction="_WaqHRSusEeydvZe_YhdkLw"/>
+              <steps_Behaviour xsi:type="seff:InternalAction" id="_-Gva_CusEeydvZe_YhdkLw" entityName="computeLidar" predecessor_AbstractAction="_8-0woiusEeydvZe_YhdkLw" successor_AbstractAction="_WaqHRSusEeydvZe_YhdkLw">
+                <resourceDemand_Action>
+                  <specification_ParametericResourceDemand specification="50.0"/>
+                  <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+                </resourceDemand_Action>
+              </steps_Behaviour>
+              <steps_Behaviour xsi:type="seff:ForkAction" id="_WaqHRSusEeydvZe_YhdkLw" entityName="ForkFusionLidar" predecessor_AbstractAction="_-Gva_CusEeydvZe_YhdkLw" successor_AbstractAction="_9l6l0CusEeydvZe_YhdkLw">
+                <asynchronousForkedBehaviours_ForkAction id="_o6KIciusEeydvZe_YhdkLw">
+                  <steps_Behaviour xsi:type="seff:StartAction" id="_qaG4QiusEeydvZe_YhdkLw" successor_AbstractAction="_rd865iusEeydvZe_YhdkLw"/>
+                  <steps_Behaviour xsi:type="seff:StopAction" id="_rGXhUCusEeydvZe_YhdkLw" predecessor_AbstractAction="_rd865iusEeydvZe_YhdkLw"/>
+                  <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_rd865iusEeydvZe_YhdkLw" entityName="callDetectObjectFusionLidar" predecessor_AbstractAction="_qaG4QiusEeydvZe_YhdkLw" successor_AbstractAction="_rGXhUCusEeydvZe_YhdkLw" calledService_ExternalService="_7Lx_gCbnEeynLPSQFkGOPQ" role_ExternalService="_TLbyNSusEeydvZe_YhdkLw">
+                    <inputVariableUsages__CallAction>
+                      <variableCharacterisation_VariableUsage type="VALUE">
+                        <specification_VariableCharacterisation specification="image.Lighting.VALUE"/>
+                      </variableCharacterisation_VariableUsage>
+                      <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="image">
+                        <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="Lighting"/>
+                      </namedReference__VariableUsage>
+                    </inputVariableUsages__CallAction>
+                    <inputVariableUsages__CallAction>
+                      <variableCharacterisation_VariableUsage type="VALUE">
+                        <specification_VariableCharacterisation specification="image.Complexity.VALUE"/>
+                      </variableCharacterisation_VariableUsage>
+                      <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="image">
+                        <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="Complexity"/>
+                      </namedReference__VariableUsage>
+                    </inputVariableUsages__CallAction>
+                    <inputVariableUsages__CallAction>
+                      <variableCharacterisation_VariableUsage type="VALUE">
+                        <specification_VariableCharacterisation specification="image.DEGREE_OF_CORRUPTION.VALUE"/>
+                      </variableCharacterisation_VariableUsage>
+                      <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="image">
+                        <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="DEGREE_OF_CORRUPTION"/>
+                      </namedReference__VariableUsage>
+                    </inputVariableUsages__CallAction>
+                  </steps_Behaviour>
+                </asynchronousForkedBehaviours_ForkAction>
+              </steps_Behaviour>
+            </branchBehaviour_BranchTransition>
+            <branchCondition_GuardedBranchTransition specification="image.DEGREE_OF_CORRUPTION.VALUE > 0.3"/>
+          </branches_Branch>
+          <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_1da0syusEeydvZe_YhdkLw">
+            <branchBehaviour_BranchTransition id="_7ezvYCusEeydvZe_YhdkLw">
+              <steps_Behaviour xsi:type="seff:StartAction" id="_HKznAiuuEeydvZe_YhdkLw" successor_AbstractAction="_IPbFvCuuEeydvZe_YhdkLw"/>
+              <steps_Behaviour xsi:type="seff:StopAction" id="_HrU6ICuuEeydvZe_YhdkLw" predecessor_AbstractAction="_oZQv9SuuEeydvZe_YhdkLw"/>
+              <steps_Behaviour xsi:type="seff:InternalAction" id="_IPbFvCuuEeydvZe_YhdkLw" entityName="computeCamera" predecessor_AbstractAction="_HKznAiuuEeydvZe_YhdkLw" successor_AbstractAction="_oZQv9SuuEeydvZe_YhdkLw">
+                <resourceDemand_Action>
+                  <specification_ParametericResourceDemand specification="5.0"/>
+                  <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+                </resourceDemand_Action>
+              </steps_Behaviour>
+              <steps_Behaviour xsi:type="seff:ForkAction" id="_oZQv9SuuEeydvZe_YhdkLw" entityName="ForkFusionCamera" predecessor_AbstractAction="_IPbFvCuuEeydvZe_YhdkLw" successor_AbstractAction="_HrU6ICuuEeydvZe_YhdkLw">
+                <asynchronousForkedBehaviours_ForkAction id="_pYAQIiuuEeydvZe_YhdkLw">
+                  <steps_Behaviour xsi:type="seff:StartAction" id="_r1niEiuuEeydvZe_YhdkLw" successor_AbstractAction="_tBiipiuuEeydvZe_YhdkLw"/>
+                  <steps_Behaviour xsi:type="seff:StopAction" id="_so9qkCuuEeydvZe_YhdkLw" predecessor_AbstractAction="_tBiipiuuEeydvZe_YhdkLw"/>
+                  <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_tBiipiuuEeydvZe_YhdkLw" entityName="callDetectObjectFusionCamera" predecessor_AbstractAction="_r1niEiuuEeydvZe_YhdkLw" successor_AbstractAction="_so9qkCuuEeydvZe_YhdkLw" calledService_ExternalService="_7Lx_gCbnEeynLPSQFkGOPQ" role_ExternalService="_TLbyNSusEeydvZe_YhdkLw">
+                    <inputVariableUsages__CallAction>
+                      <variableCharacterisation_VariableUsage type="VALUE">
+                        <specification_VariableCharacterisation specification="image.Lighting.VALUE"/>
+                      </variableCharacterisation_VariableUsage>
+                      <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="image">
+                        <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="Lighting"/>
+                      </namedReference__VariableUsage>
+                    </inputVariableUsages__CallAction>
+                    <inputVariableUsages__CallAction>
+                      <variableCharacterisation_VariableUsage type="VALUE">
+                        <specification_VariableCharacterisation specification="image.Complexity.VALUE"/>
+                      </variableCharacterisation_VariableUsage>
+                      <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="image">
+                        <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="Complexity"/>
+                      </namedReference__VariableUsage>
+                    </inputVariableUsages__CallAction>
+                    <inputVariableUsages__CallAction>
+                      <variableCharacterisation_VariableUsage type="VALUE">
+                        <specification_VariableCharacterisation specification="image.DEGREE_OF_CORRUPTION.VALUE"/>
+                      </variableCharacterisation_VariableUsage>
+                      <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="image">
+                        <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="DEGREE_OF_CORRUPTION"/>
+                      </namedReference__VariableUsage>
+                    </inputVariableUsages__CallAction>
+                  </steps_Behaviour>
+                </asynchronousForkedBehaviours_ForkAction>
+              </steps_Behaviour>
+            </branchBehaviour_BranchTransition>
+            <branchCondition_GuardedBranchTransition specification="image.DEGREE_OF_CORRUPTION.VALUE &lt; 0.3"/>
+          </branches_Branch>
+        </steps_Behaviour>
+      </serviceEffectSpecifications__BasicComponent>
+    </components__Repository>
     <components__Repository xsi:type="repository:BasicComponent" id="_5l_i6SbmEeynLPSQFkGOPQ" entityName="Camera">
       <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_-9XQMSbmEeynLPSQFkGOPQ" entityName="Provided_Camera" providedInterface__OperationProvidedRole="_cnMCiCbsEeynLPSQFkGOPQ"/>
       <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="__gM3hSbmEeynLPSQFkGOPQ" entityName="Required_IObjectDetection" requiredInterface__OperationRequiredRole="_12pG2CbnEeynLPSQFkGOPQ"/>
       <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_AipL9ybnEeynLPSQFkGOPQ" describedService__SEFF="_fA0zYCbsEeynLPSQFkGOPQ">
-        <steps_Behaviour xsi:type="seff:StartAction" id="_BJfJgibnEeynLPSQFkGOPQ" successor_AbstractAction="_RftR8SnEEeywQ_wyQlQHQw"/>
+        <steps_Behaviour xsi:type="seff:StartAction" id="_BJfJgibnEeynLPSQFkGOPQ" successor_AbstractAction="_PuY4HCryEey6yagAtv9qzg"/>
         <steps_Behaviour xsi:type="seff:StopAction" id="_D5Aq0CbnEeynLPSQFkGOPQ" predecessor_AbstractAction="_RftR8SnEEeywQ_wyQlQHQw"/>
-        <steps_Behaviour xsi:type="seff:ForkAction" id="_RftR8SnEEeywQ_wyQlQHQw" entityName="ForkCamera" predecessor_AbstractAction="_BJfJgibnEeynLPSQFkGOPQ" successor_AbstractAction="_D5Aq0CbnEeynLPSQFkGOPQ">
+        <steps_Behaviour xsi:type="seff:InternalAction" id="_PuY4HCryEey6yagAtv9qzg" entityName="takeImage" predecessor_AbstractAction="_BJfJgibnEeynLPSQFkGOPQ" successor_AbstractAction="_RftR8SnEEeywQ_wyQlQHQw">
+          <resourceDemand_Action>
+            <specification_ParametericResourceDemand specification="5"/>
+            <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+          </resourceDemand_Action>
+        </steps_Behaviour>
+        <steps_Behaviour xsi:type="seff:ForkAction" id="_RftR8SnEEeywQ_wyQlQHQw" entityName="ForkCamera" predecessor_AbstractAction="_PuY4HCryEey6yagAtv9qzg" successor_AbstractAction="_D5Aq0CbnEeynLPSQFkGOPQ">
           <asynchronousForkedBehaviours_ForkAction id="_XeIYMSnEEeywQ_wyQlQHQw">
-            <steps_Behaviour xsi:type="seff:StartAction" id="_ZKJ1IinEEeywQ_wyQlQHQw" successor_AbstractAction="_PuY4HCryEey6yagAtv9qzg"/>
+            <steps_Behaviour xsi:type="seff:StartAction" id="_ZKJ1IinEEeywQ_wyQlQHQw" successor_AbstractAction="_Z4p55inEEeywQ_wyQlQHQw"/>
             <steps_Behaviour xsi:type="seff:StopAction" id="_hVPnQCnEEeywQ_wyQlQHQw" predecessor_AbstractAction="_Z4p55inEEeywQ_wyQlQHQw"/>
-            <steps_Behaviour xsi:type="seff:InternalAction" id="_PuY4HCryEey6yagAtv9qzg" entityName="takeImage" predecessor_AbstractAction="_ZKJ1IinEEeywQ_wyQlQHQw" successor_AbstractAction="_Z4p55inEEeywQ_wyQlQHQw">
-              <resourceDemand_Action>
-                <specification_ParametericResourceDemand specification="5"/>
-                <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
-              </resourceDemand_Action>
-            </steps_Behaviour>
-            <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_Z4p55inEEeywQ_wyQlQHQw" entityName="callDetection" predecessor_AbstractAction="_PuY4HCryEey6yagAtv9qzg" successor_AbstractAction="_hVPnQCnEEeywQ_wyQlQHQw" calledService_ExternalService="_7Lx_gCbnEeynLPSQFkGOPQ" role_ExternalService="__gM3hSbmEeynLPSQFkGOPQ">
+            <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_Z4p55inEEeywQ_wyQlQHQw" entityName="callDetection" predecessor_AbstractAction="_ZKJ1IinEEeywQ_wyQlQHQw" successor_AbstractAction="_hVPnQCnEEeywQ_wyQlQHQw" calledService_ExternalService="_7Lx_gCbnEeynLPSQFkGOPQ" role_ExternalService="__gM3hSbmEeynLPSQFkGOPQ">
               <inputVariableUsages__CallAction>
                 <variableCharacterisation_VariableUsage type="VALUE">
                   <specification_VariableCharacterisation specification="image.Lighting.VALUE"/>
@@ -223,6 +324,30 @@
                 </variableCharacterisation_VariableUsage>
                 <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="image">
                   <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="DEGREE_OF_CORRUPTION"/>
+                </namedReference__VariableUsage>
+              </inputVariableUsages__CallAction>
+            </steps_Behaviour>
+          </asynchronousForkedBehaviours_ForkAction>
+        </steps_Behaviour>
+      </serviceEffectSpecifications__BasicComponent>
+    </components__Repository>
+    <components__Repository xsi:type="repository:BasicComponent" id="_QOtY0CugEeydvZe_YhdkLw" entityName="Lidar">
+      <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_Y5KAcSugEeydvZe_YhdkLw" entityName="Provided_Lidar" providedInterface__OperationProvidedRole="_gUTjZyugEeydvZe_YhdkLw"/>
+      <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_ZUlYMiugEeydvZe_YhdkLw" entityName="Required_ObjectDetectionLidar" requiredInterface__OperationRequiredRole="_12pG2CbnEeynLPSQFkGOPQ"/>
+      <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_cS-b9yugEeydvZe_YhdkLw" describedService__SEFF="_mHlwoCugEeydvZe_YhdkLw">
+        <steps_Behaviour xsi:type="seff:StartAction" id="_8KYSYiugEeydvZe_YhdkLw" successor_AbstractAction="_9oDxVSugEeydvZe_YhdkLw"/>
+        <steps_Behaviour xsi:type="seff:StopAction" id="_87LdMCugEeydvZe_YhdkLw" predecessor_AbstractAction="_9oDxVSugEeydvZe_YhdkLw"/>
+        <steps_Behaviour xsi:type="seff:ForkAction" id="_9oDxVSugEeydvZe_YhdkLw" entityName="ForkLidar" predecessor_AbstractAction="_8KYSYiugEeydvZe_YhdkLw" successor_AbstractAction="_87LdMCugEeydvZe_YhdkLw">
+          <asynchronousForkedBehaviours_ForkAction id="_otg0kiuhEeydvZe_YhdkLw">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_ykF4IiuhEeydvZe_YhdkLw" successor_AbstractAction="_zt5_5iuhEeydvZe_YhdkLw"/>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_y-3IkCuhEeydvZe_YhdkLw" predecessor_AbstractAction="_zt5_5iuhEeydvZe_YhdkLw"/>
+            <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_zt5_5iuhEeydvZe_YhdkLw" entityName="callDetectObjectLidar" predecessor_AbstractAction="_ykF4IiuhEeydvZe_YhdkLw" successor_AbstractAction="_y-3IkCuhEeydvZe_YhdkLw" calledService_ExternalService="_7Lx_gCbnEeynLPSQFkGOPQ" role_ExternalService="_ZUlYMiugEeydvZe_YhdkLw">
+              <inputVariableUsages__CallAction>
+                <variableCharacterisation_VariableUsage type="VALUE">
+                  <specification_VariableCharacterisation specification="sensorData.Complexity.VALUE"/>
+                </variableCharacterisation_VariableUsage>
+                <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="sensorData">
+                  <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="Complexity"/>
                 </namedReference__VariableUsage>
               </inputVariableUsages__CallAction>
             </steps_Behaviour>
@@ -271,6 +396,23 @@
           <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
         </parameters__OperationSignature>
         <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+      </signatures__OperationInterface>
+    </interfaces__Repository>
+    <interfaces__Repository xsi:type="repository:OperationInterface" id="_gUTjZyugEeydvZe_YhdkLw" entityName="ILidar">
+      <signatures__OperationInterface id="_mHlwoCugEeydvZe_YhdkLw" entityName="takeShot">
+        <parameters__OperationSignature parameterName="sensorData">
+          <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+        </parameters__OperationSignature>
+      </signatures__OperationInterface>
+    </interfaces__Repository>
+    <interfaces__Repository xsi:type="repository:OperationInterface" id="_IYTfdyuvEeydvZe_YhdkLw" entityName="ISensorFusion">
+      <signatures__OperationInterface id="_Kpb0kCuvEeydvZe_YhdkLw" entityName="fuse">
+        <parameters__OperationSignature parameterName="image">
+          <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+        </parameters__OperationSignature>
+        <parameters__OperationSignature parameterName="sensorData">
+          <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+        </parameters__OperationSignature>
       </signatures__OperationInterface>
     </interfaces__Repository>
   </repository:Repository>
