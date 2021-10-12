@@ -15,7 +15,7 @@
     </communicationLinkResourceSpecifications_LinkingResource>
   </linkingResources__ResourceEnvironment>
   <resourceContainer_ResourceEnvironment id="_1Ujg4Cb8EeynLPSQFkGOPQ" entityName="Processing">
-    <activeResourceSpecifications_ResourceContainer id="_5bSswCb8EeynLPSQFkGOPQ">
+    <activeResourceSpecifications_ResourceContainer id="_5bSswCb8EeynLPSQFkGOPQ" numberOfReplicas="4">
       <schedulingPolicy href="pathmap://PCM_MODELS/Palladio.resourcetype#ProcessorSharing"/>
       <activeResourceType_ActiveResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
       <processingRate_ProcessingResourceSpecification specification="1000"/>
@@ -29,7 +29,7 @@
     </activeResourceSpecifications_ResourceContainer>
   </resourceContainer_ResourceEnvironment>
   <resourceContainer_ResourceEnvironment id="_CFhB8CoeEeyOt9411N9dxQ" entityName="Actuator">
-    <activeResourceSpecifications_ResourceContainer id="_R8F5ECoeEeyOt9411N9dxQ">
+    <activeResourceSpecifications_ResourceContainer id="_R8F5ECoeEeyOt9411N9dxQ" numberOfReplicas="4">
       <schedulingPolicy href="pathmap://PCM_MODELS/Palladio.resourcetype#ProcessorSharing"/>
       <activeResourceType_ActiveResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
       <processingRate_ProcessingResourceSpecification specification="1000"/>

@@ -33,4 +33,7 @@
   <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Image Complexity" resourceURIRepresentation="_T09SkCr3Eey6yagAtv9qzg">
     <qualitygate href="PcmStandard.repository#_T09SkCr3Eey6yagAtv9qzg"/>
   </measuringPoints>
+  <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Image Degree Of Corruption" resourceURIRepresentation="_xR8CcCtOEey86NKfZPe9FA">
+    <qualitygate href="PcmStandard.repository#_xR8CcCtOEey86NKfZPe9FA"/>
+  </measuringPoints>
 </org.palladiosimulator.edp2.models:MeasuringPointRepository>

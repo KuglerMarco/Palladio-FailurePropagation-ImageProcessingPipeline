@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<allocation:Allocation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:allocation="http://palladiosimulator.org/PalladioComponentModel/Allocation/5.2" id="_rFq4MCt0EeythJI8Wqxsjg" entityName="defaultAllocation">
+  <targetResourceEnvironment_Allocation href="default.resourceenvironment#/"/>
+  <system_Allocation href="scenario2.system#_zMgj0CtxEeythJI8Wqxsjg"/>
+  <allocationContexts_Allocation id="_sEeCwCt0EeythJI8Wqxsjg" entityName="Allocation_Assembly_Camera &lt;Camera> &lt;Camera>">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#_qS9oMCerEey2vvABLJYRXg"/>
+    <assemblyContext_AllocationContext href="scenario2.system#_JLoGgCtyEeythJI8Wqxsjg"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_t_RikCt0EeythJI8Wqxsjg" entityName="Allocation_Assembly_Object Detection &lt;Object Detection> &lt;Object Detection>">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#_1Ujg4Cb8EeynLPSQFkGOPQ"/>
+    <assemblyContext_AllocationContext href="scenario2.system#_aUaMYCtyEeythJI8Wqxsjg"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_u-5MgCt0EeythJI8Wqxsjg" entityName="Allocation_Assembly_Object Tracking &lt;Object Tracking> &lt;Object Tracking>">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#_1Ujg4Cb8EeynLPSQFkGOPQ"/>
+    <assemblyContext_AllocationContext href="scenario2.system#_iR8qsCtyEeythJI8Wqxsjg"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_wOFjgCt0EeythJI8Wqxsjg" entityName="Allocation_Assembly_Trajectory Planning &lt;Trajectory Planning> &lt;Trajectory Planning>">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#_1Ujg4Cb8EeynLPSQFkGOPQ"/>
+    <assemblyContext_AllocationContext href="scenario2.system#_lOpsYCtyEeythJI8Wqxsjg"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_ykjEkCt0EeythJI8Wqxsjg" entityName="Allocation_Assembly_Image Preprocessing &lt;Image Preprocessing> &lt;Image Preprocessing>">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#_1Ujg4Cb8EeynLPSQFkGOPQ"/>
+    <assemblyContext_AllocationContext href="scenario2.system#_UT73sCtyEeythJI8Wqxsjg"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_3btAwCt0EeythJI8Wqxsjg" entityName="Allocation_Assembly_Vehicle Control &lt;Vehicle Control> &lt;Vehicle Control>">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#_CFhB8CoeEeyOt9411N9dxQ"/>
+    <assemblyContext_AllocationContext href="scenario2.system#_o0fxsCtyEeythJI8Wqxsjg"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_5CxsQCt0EeythJI8Wqxsjg" entityName="Allocation_Assembly_Braking Control &lt;Braking Control> &lt;Braking Control>">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#_CFhB8CoeEeyOt9411N9dxQ"/>
+    <assemblyContext_AllocationContext href="scenario2.system#_smakICtyEeythJI8Wqxsjg"/>
+  </allocationContexts_Allocation>
+</allocation:Allocation>

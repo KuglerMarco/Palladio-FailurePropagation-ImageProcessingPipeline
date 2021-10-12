@@ -26,8 +26,4 @@
     <resourceContainer_AllocationContext href="default.resourceenvironment#_CFhB8CoeEeyOt9411N9dxQ"/>
     <assemblyContext_AllocationContext href="default.system#_a6XpMCn-EeywQ_wyQlQHQw"/>
   </allocationContexts_Allocation>
-  <allocationContexts_Allocation id="_PBjdICp3Eey_87ccuV1alw">
-    <resourceContainer_AllocationContext href="default.resourceenvironment#_CFhB8CoeEeyOt9411N9dxQ"/>
-    <assemblyContext_AllocationContext href="default.system#_ecqEMCn-EeywQ_wyQlQHQw"/>
-  </allocationContexts_Allocation>
 </allocation:Allocation>

@@ -5,7 +5,10 @@
     <scalingFactor specification="1.0"/>
   </failuretypes>
   <failuretypes xsi:type="failuretype:SWCrashFailure" id="_eq_XICe5Eey2vvABLJYRXg"/>
-  <failuretypes xsi:type="failuretype:SWContentFailure" id="_n5zQEie5Eey2vvABLJYRXg">
-    <degreeOfCorruption specification="0.3"/>
+  <failuretypes xsi:type="failuretype:SWContentFailure" id="_n5zQEie5Eey2vvABLJYRXg" entityName="Content Failure Camera">
+    <degreeOfCorruption specification="0.5"/>
+  </failuretypes>
+  <failuretypes xsi:type="failuretype:SWTransientFailure" id="_JxCegytjEeythJI8Wqxsjg" decoratedFailure="_n5zQEie5Eey2vvABLJYRXg">
+    <duration specification="10.0"/>
   </failuretypes>
 </failuretype:FailureTypeRepository>

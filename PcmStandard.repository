@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:emfprofileapplication="http://www.modelversioning.org/emfprofile/application/1.1" xmlns:org.palladiosimulator.qualitygate="http://www.palladiosimulator.org/qualitygateprofile/1.0" xmlns:qualitygate="http://palladiosimulator.org/qualitygate/1.0" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" xmlns:stoex="http://sdq.ipd.uka.de/StochasticExpressions/2.2">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:emfprofileapplication="http://www.modelversioning.org/emfprofile/application/1.1" xmlns:failuretype="http://palladiosimulator.org/failuretype/1.0" xmlns:org.palladiosimulator.qualitygate="http://www.palladiosimulator.org/qualitygateprofile/1.0" xmlns:qualitygate="http://palladiosimulator.org/qualitygate/1.0" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" xmlns:stoex="http://sdq.ipd.uka.de/StochasticExpressions/2.2">
   <repository:Repository id="_Gzo5EMuwEeOrXJYSTPO-kw" entityName="PcmStandardRepository" repositoryDescription="This projects holds a repository with a set of standard reusable software components and interfaces. These components and interfaces can be used across multiple projects to ease starting modeling.">
     <components__Repository xsi:type="repository:BasicComponent" id="_UGDZYCnVEeywQ_wyQlQHQw" entityName="Braking Control">
       <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_m6csgSnVEeywQ_wyQlQHQw" entityName="Provided_BrakingControl" providedInterface__OperationProvidedRole="_9BlAFynzEeywQ_wyQlQHQw"/>
@@ -16,7 +16,7 @@
     </components__Repository>
     <components__Repository xsi:type="repository:BasicComponent" id="_QrQtgCnVEeywQ_wyQlQHQw" entityName="Vehicle Control">
       <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_ifx4ASnVEeywQ_wyQlQHQw" entityName="Provided_VehicleControl" providedInterface__OperationProvidedRole="_H-m3YMuwEeOrXJYSTPO-kw"/>
-      <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_kVpNdSnVEeywQ_wyQlQHQw" entityName="Required_VehicleControl" requiredInterface__OperationRequiredRole="_9BlAFynzEeywQ_wyQlQHQw"/>
+      <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_kVpNdSnVEeywQ_wyQlQHQw" entityName="Required_IBrakingControl" requiredInterface__OperationRequiredRole="_9BlAFynzEeywQ_wyQlQHQw"/>
       <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="__bFDhynyEeywQ_wyQlQHQw" describedService__SEFF="_JcqJwMuwEeOrXJYSTPO-kw">
         <steps_Behaviour xsi:type="seff:StartAction" id="_Atsh8inzEeywQ_wyQlQHQw" successor_AbstractAction="_rAdkDCnzEeywQ_wyQlQHQw"/>
         <steps_Behaviour xsi:type="seff:StopAction" id="__941oCnyEeywQ_wyQlQHQw" predecessor_AbstractAction="_BJu9tSnzEeywQ_wyQlQHQw"/>
@@ -37,13 +37,13 @@
     </components__Repository>
     <components__Repository xsi:type="repository:BasicComponent" id="_5hGrkCbVEeynLPSQFkGOPQ" entityName="Trajectory Planning">
       <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_6TQhQSbVEeynLPSQFkGOPQ" entityName="Provided_TrajectoryPlanning" providedInterface__OperationProvidedRole="_zDerZybWEeynLPSQFkGOPQ"/>
-      <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_gSvShSnyEeywQ_wyQlQHQw" entityName="Required_TrajectoryPlanning" requiredInterface__OperationRequiredRole="_H-m3YMuwEeOrXJYSTPO-kw"/>
+      <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_gSvShSnyEeywQ_wyQlQHQw" entityName="Required_IVehicleControl" requiredInterface__OperationRequiredRole="_H-m3YMuwEeOrXJYSTPO-kw"/>
       <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_LPYEJybWEeynLPSQFkGOPQ" describedService__SEFF="_NQLo0CbXEeynLPSQFkGOPQ">
         <steps_Behaviour xsi:type="seff:StartAction" id="_OijFEibWEeynLPSQFkGOPQ" successor_AbstractAction="_tncX7Cn0EeywQ_wyQlQHQw"/>
         <steps_Behaviour xsi:type="seff:StopAction" id="_PYToYCbWEeynLPSQFkGOPQ" predecessor_AbstractAction="_suN7xSnyEeywQ_wyQlQHQw"/>
         <steps_Behaviour xsi:type="seff:InternalAction" id="_tncX7Cn0EeywQ_wyQlQHQw" entityName="planTrajectory" predecessor_AbstractAction="_OijFEibWEeynLPSQFkGOPQ" successor_AbstractAction="_suN7xSnyEeywQ_wyQlQHQw">
           <resourceDemand_Action>
-            <specification_ParametericResourceDemand specification="image.Objects.NUMBER_OF_ELEMENTS"/>
+            <specification_ParametericResourceDemand specification="10 + image.Objects.NUMBER_OF_ELEMENTS"/>
             <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
           </resourceDemand_Action>
         </steps_Behaviour>
@@ -58,13 +58,13 @@
     </components__Repository>
     <components__Repository xsi:type="repository:BasicComponent" id="_27EykCbXEeynLPSQFkGOPQ" entityName="Object Tracking">
       <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_76J7sSbXEeynLPSQFkGOPQ" entityName="Provided_ObjectTracking" providedInterface__OperationProvidedRole="_ue3oCCbnEeynLPSQFkGOPQ"/>
-      <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="__H4b9SbXEeynLPSQFkGOPQ" entityName="Required_ObjectTracking" requiredInterface__OperationRequiredRole="_zDerZybWEeynLPSQFkGOPQ"/>
+      <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="__H4b9SbXEeynLPSQFkGOPQ" entityName="Required_ITrajectoryPlanning" requiredInterface__OperationRequiredRole="_zDerZybWEeynLPSQFkGOPQ"/>
       <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_v3PQhybkEeynLPSQFkGOPQ" describedService__SEFF="_zW1cgCbnEeynLPSQFkGOPQ">
         <steps_Behaviour xsi:type="seff:StartAction" id="_x-SckibkEeynLPSQFkGOPQ" successor_AbstractAction="_r4aADCnwEeywQ_wyQlQHQw"/>
         <steps_Behaviour xsi:type="seff:StopAction" id="_9xHxcCbkEeynLPSQFkGOPQ" predecessor_AbstractAction="_nVwUMSnwEeywQ_wyQlQHQw"/>
         <steps_Behaviour xsi:type="seff:InternalAction" id="_r4aADCnwEeywQ_wyQlQHQw" entityName="trackObjects" predecessor_AbstractAction="_x-SckibkEeynLPSQFkGOPQ" successor_AbstractAction="_nVwUMSnwEeywQ_wyQlQHQw">
           <resourceDemand_Action>
-            <specification_ParametericResourceDemand specification="image.Objects.NUMBER_OF_ELEMENTS"/>
+            <specification_ParametericResourceDemand specification="10 + image.Objects.NUMBER_OF_ELEMENTS"/>
             <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
           </resourceDemand_Action>
         </steps_Behaviour>
@@ -88,13 +88,13 @@
     </components__Repository>
     <components__Repository xsi:type="repository:BasicComponent" id="_vXrUwCbmEeynLPSQFkGOPQ" entityName="Object Detection">
       <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_zy_pgSbmEeynLPSQFkGOPQ" entityName="Provided_ObjectDetection" providedInterface__OperationProvidedRole="_12pG2CbnEeynLPSQFkGOPQ"/>
-      <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_0w-UtSbmEeynLPSQFkGOPQ" entityName="Required_ObjectDetection" requiredInterface__OperationRequiredRole="_ue3oCCbnEeynLPSQFkGOPQ"/>
+      <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_0w-UtSbmEeynLPSQFkGOPQ" entityName="Required_ObjectTracking" requiredInterface__OperationRequiredRole="_ue3oCCbnEeynLPSQFkGOPQ"/>
       <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_1x1UxybmEeynLPSQFkGOPQ" describedService__SEFF="_7Lx_gCbnEeynLPSQFkGOPQ">
         <steps_Behaviour xsi:type="seff:StartAction" id="_2V3O4ibmEeynLPSQFkGOPQ" successor_AbstractAction="_pIsY3CntEeywQ_wyQlQHQw"/>
         <steps_Behaviour xsi:type="seff:StopAction" id="_3XsfUCbmEeynLPSQFkGOPQ" predecessor_AbstractAction="_jBWAFSntEeywQ_wyQlQHQw"/>
         <steps_Behaviour xsi:type="seff:InternalAction" id="_pIsY3CntEeywQ_wyQlQHQw" entityName="detectObject" predecessor_AbstractAction="_2V3O4ibmEeynLPSQFkGOPQ" successor_AbstractAction="_jBWAFSntEeywQ_wyQlQHQw">
           <resourceDemand_Action>
-            <specification_ParametericResourceDemand specification="image.Complexity.VALUE + (1 / image.Lighting.VALUE) * 10"/>
+            <specification_ParametericResourceDemand specification="10 + image.Complexity.VALUE * 5 + (1 / image.Lighting.VALUE) * 10"/>
             <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
           </resourceDemand_Action>
         </steps_Behaviour>
@@ -116,23 +116,45 @@
         </steps_Behaviour>
       </serviceEffectSpecifications__BasicComponent>
     </components__Repository>
-    <components__Repository xsi:type="repository:BasicComponent" id="_5l_i6SbmEeynLPSQFkGOPQ" entityName="Camera">
-      <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_-9XQMSbmEeynLPSQFkGOPQ" entityName="Provided_Camera" providedInterface__OperationProvidedRole="_cnMCiCbsEeynLPSQFkGOPQ"/>
-      <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="__gM3hSbmEeynLPSQFkGOPQ" entityName="Required_Camera" requiredInterface__OperationRequiredRole="_12pG2CbnEeynLPSQFkGOPQ"/>
-      <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_AipL9ybnEeynLPSQFkGOPQ" describedService__SEFF="_fA0zYCbsEeynLPSQFkGOPQ">
-        <steps_Behaviour xsi:type="seff:StartAction" id="_BJfJgibnEeynLPSQFkGOPQ" successor_AbstractAction="_RftR8SnEEeywQ_wyQlQHQw"/>
-        <steps_Behaviour xsi:type="seff:StopAction" id="_D5Aq0CbnEeynLPSQFkGOPQ" predecessor_AbstractAction="_RftR8SnEEeywQ_wyQlQHQw"/>
-        <steps_Behaviour xsi:type="seff:InternalAction" id="_PuY4HCryEey6yagAtv9qzg">
-          <resourceDemand_Action>
-            <specification_ParametericResourceDemand specification="5"/>
-            <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
-          </resourceDemand_Action>
+    <components__Repository xsi:type="repository:BasicComponent" id="_OwHG8CtrEeythJI8Wqxsjg" entityName="Image Preprocessing">
+      <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_RS_TYStrEeythJI8Wqxsjg" entityName="Provided_Preprocessing" providedInterface__OperationProvidedRole="_12pG2CbnEeynLPSQFkGOPQ"/>
+      <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_SYF6RStrEeythJI8Wqxsjg" entityName="Required_IObjectDetection_ImagePreprocess" requiredInterface__OperationRequiredRole="_12pG2CbnEeynLPSQFkGOPQ"/>
+      <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_dJpYVytrEeythJI8Wqxsjg" describedService__SEFF="_7Lx_gCbnEeynLPSQFkGOPQ">
+        <steps_Behaviour xsi:type="seff:StartAction" id="_gRwYwitrEeythJI8Wqxsjg" successor_AbstractAction="_76SowStwEeythJI8Wqxsjg"/>
+        <steps_Behaviour xsi:type="seff:StopAction" id="_hXstICtrEeythJI8Wqxsjg" predecessor_AbstractAction="_i3PNRStrEeythJI8Wqxsjg"/>
+        <steps_Behaviour xsi:type="seff:BranchAction" id="_76SowStwEeythJI8Wqxsjg" entityName="branchPreprocess" predecessor_AbstractAction="_gRwYwitrEeythJI8Wqxsjg" successor_AbstractAction="_i3PNRStrEeythJI8Wqxsjg">
+          <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_-ROq8ytwEeythJI8Wqxsjg">
+            <branchBehaviour_BranchTransition id="_ErexkCtxEeythJI8Wqxsjg">
+              <steps_Behaviour xsi:type="seff:StartAction" id="_PlF04itwEeythJI8Wqxsjg" successor_AbstractAction="_hvzrLCtrEeythJI8Wqxsjg"/>
+              <steps_Behaviour xsi:type="seff:StopAction" id="_QhADgCtwEeythJI8Wqxsjg" predecessor_AbstractAction="_hvzrLCtrEeythJI8Wqxsjg"/>
+              <steps_Behaviour xsi:type="seff:InternalAction" id="_hvzrLCtrEeythJI8Wqxsjg" entityName="preprocessImage" predecessor_AbstractAction="_PlF04itwEeythJI8Wqxsjg" successor_AbstractAction="_QhADgCtwEeythJI8Wqxsjg">
+                <resourceDemand_Action>
+                  <specification_ParametericResourceDemand specification="(1 / image.DEGREE_OF_CORRUPTION.VALUE) * 35 + 35"/>
+                  <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+                </resourceDemand_Action>
+              </steps_Behaviour>
+            </branchBehaviour_BranchTransition>
+            <branchCondition_GuardedBranchTransition specification="image.DEGREE_OF_CORRUPTION.VALUE > 0.2"/>
+          </branches_Branch>
+          <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_9E7WQyt4EeythJI8Wqxsjg">
+            <branchBehaviour_BranchTransition id="_C8K2cCt5EeythJI8Wqxsjg">
+              <steps_Behaviour xsi:type="seff:StartAction" id="_F_TQQit5EeythJI8Wqxsjg" successor_AbstractAction="_HmfQjCt5EeythJI8Wqxsjg"/>
+              <steps_Behaviour xsi:type="seff:StopAction" id="_GpW54Ct5EeythJI8Wqxsjg" predecessor_AbstractAction="_HmfQjCt5EeythJI8Wqxsjg"/>
+              <steps_Behaviour xsi:type="seff:InternalAction" id="_HmfQjCt5EeythJI8Wqxsjg" entityName="dontPreprocess" predecessor_AbstractAction="_F_TQQit5EeythJI8Wqxsjg" successor_AbstractAction="_GpW54Ct5EeythJI8Wqxsjg">
+                <resourceDemand_Action>
+                  <specification_ParametericResourceDemand specification="5"/>
+                  <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+                </resourceDemand_Action>
+              </steps_Behaviour>
+            </branchBehaviour_BranchTransition>
+            <branchCondition_GuardedBranchTransition specification="image.DEGREE_OF_CORRUPTION.VALUE &lt;= 0.2"/>
+          </branches_Branch>
         </steps_Behaviour>
-        <steps_Behaviour xsi:type="seff:ForkAction" id="_RftR8SnEEeywQ_wyQlQHQw" entityName="ForkCamera" predecessor_AbstractAction="_BJfJgibnEeynLPSQFkGOPQ" successor_AbstractAction="_D5Aq0CbnEeynLPSQFkGOPQ">
-          <asynchronousForkedBehaviours_ForkAction id="_XeIYMSnEEeywQ_wyQlQHQw">
-            <steps_Behaviour xsi:type="seff:StartAction" id="_ZKJ1IinEEeywQ_wyQlQHQw" successor_AbstractAction="_Z4p55inEEeywQ_wyQlQHQw"/>
-            <steps_Behaviour xsi:type="seff:StopAction" id="_hVPnQCnEEeywQ_wyQlQHQw" predecessor_AbstractAction="_Z4p55inEEeywQ_wyQlQHQw"/>
-            <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_Z4p55inEEeywQ_wyQlQHQw" entityName="callDetection" predecessor_AbstractAction="_ZKJ1IinEEeywQ_wyQlQHQw" successor_AbstractAction="_hVPnQCnEEeywQ_wyQlQHQw" calledService_ExternalService="_7Lx_gCbnEeynLPSQFkGOPQ" role_ExternalService="__gM3hSbmEeynLPSQFkGOPQ">
+        <steps_Behaviour xsi:type="seff:ForkAction" id="_i3PNRStrEeythJI8Wqxsjg" entityName="ForkPreprocess" predecessor_AbstractAction="_76SowStwEeythJI8Wqxsjg" successor_AbstractAction="_hXstICtrEeythJI8Wqxsjg">
+          <asynchronousForkedBehaviours_ForkAction id="_jRybQitrEeythJI8Wqxsjg">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_j_TBgitrEeythJI8Wqxsjg" successor_AbstractAction="_mlfApitrEeythJI8Wqxsjg"/>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_mGKAUCtrEeythJI8Wqxsjg" predecessor_AbstractAction="_mlfApitrEeythJI8Wqxsjg"/>
+            <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_mlfApitrEeythJI8Wqxsjg" entityName="callDetectObject" predecessor_AbstractAction="_j_TBgitrEeythJI8Wqxsjg" successor_AbstractAction="_mGKAUCtrEeythJI8Wqxsjg" calledService_ExternalService="_7Lx_gCbnEeynLPSQFkGOPQ" role_ExternalService="_SYF6RStrEeythJI8Wqxsjg">
               <inputVariableUsages__CallAction>
                 <variableCharacterisation_VariableUsage type="VALUE">
                   <specification_VariableCharacterisation specification="image.Lighting.VALUE"/>
@@ -147,6 +169,60 @@
                 </variableCharacterisation_VariableUsage>
                 <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="image">
                   <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="Complexity"/>
+                </namedReference__VariableUsage>
+              </inputVariableUsages__CallAction>
+              <inputVariableUsages__CallAction>
+                <variableCharacterisation_VariableUsage type="VALUE">
+                  <specification_VariableCharacterisation specification="0.0"/>
+                </variableCharacterisation_VariableUsage>
+                <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="image">
+                  <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="DEGREE_OF_CORRUPTION"/>
+                </namedReference__VariableUsage>
+              </inputVariableUsages__CallAction>
+            </steps_Behaviour>
+          </asynchronousForkedBehaviours_ForkAction>
+        </steps_Behaviour>
+      </serviceEffectSpecifications__BasicComponent>
+    </components__Repository>
+    <components__Repository xsi:type="repository:BasicComponent" id="_5l_i6SbmEeynLPSQFkGOPQ" entityName="Camera">
+      <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_-9XQMSbmEeynLPSQFkGOPQ" entityName="Provided_Camera" providedInterface__OperationProvidedRole="_cnMCiCbsEeynLPSQFkGOPQ"/>
+      <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="__gM3hSbmEeynLPSQFkGOPQ" entityName="Required_IObjectDetection" requiredInterface__OperationRequiredRole="_12pG2CbnEeynLPSQFkGOPQ"/>
+      <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_AipL9ybnEeynLPSQFkGOPQ" describedService__SEFF="_fA0zYCbsEeynLPSQFkGOPQ">
+        <steps_Behaviour xsi:type="seff:StartAction" id="_BJfJgibnEeynLPSQFkGOPQ" successor_AbstractAction="_RftR8SnEEeywQ_wyQlQHQw"/>
+        <steps_Behaviour xsi:type="seff:StopAction" id="_D5Aq0CbnEeynLPSQFkGOPQ" predecessor_AbstractAction="_RftR8SnEEeywQ_wyQlQHQw"/>
+        <steps_Behaviour xsi:type="seff:ForkAction" id="_RftR8SnEEeywQ_wyQlQHQw" entityName="ForkCamera" predecessor_AbstractAction="_BJfJgibnEeynLPSQFkGOPQ" successor_AbstractAction="_D5Aq0CbnEeynLPSQFkGOPQ">
+          <asynchronousForkedBehaviours_ForkAction id="_XeIYMSnEEeywQ_wyQlQHQw">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_ZKJ1IinEEeywQ_wyQlQHQw" successor_AbstractAction="_PuY4HCryEey6yagAtv9qzg"/>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_hVPnQCnEEeywQ_wyQlQHQw" predecessor_AbstractAction="_Z4p55inEEeywQ_wyQlQHQw"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_PuY4HCryEey6yagAtv9qzg" entityName="takeImage" predecessor_AbstractAction="_ZKJ1IinEEeywQ_wyQlQHQw" successor_AbstractAction="_Z4p55inEEeywQ_wyQlQHQw">
+              <resourceDemand_Action>
+                <specification_ParametericResourceDemand specification="5"/>
+                <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+              </resourceDemand_Action>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_Z4p55inEEeywQ_wyQlQHQw" entityName="callDetection" predecessor_AbstractAction="_PuY4HCryEey6yagAtv9qzg" successor_AbstractAction="_hVPnQCnEEeywQ_wyQlQHQw" calledService_ExternalService="_7Lx_gCbnEeynLPSQFkGOPQ" role_ExternalService="__gM3hSbmEeynLPSQFkGOPQ">
+              <inputVariableUsages__CallAction>
+                <variableCharacterisation_VariableUsage type="VALUE">
+                  <specification_VariableCharacterisation specification="image.Lighting.VALUE"/>
+                </variableCharacterisation_VariableUsage>
+                <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="image">
+                  <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="Lighting"/>
+                </namedReference__VariableUsage>
+              </inputVariableUsages__CallAction>
+              <inputVariableUsages__CallAction>
+                <variableCharacterisation_VariableUsage type="VALUE">
+                  <specification_VariableCharacterisation specification="image.Complexity.VALUE"/>
+                </variableCharacterisation_VariableUsage>
+                <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="image">
+                  <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="Complexity"/>
+                </namedReference__VariableUsage>
+              </inputVariableUsages__CallAction>
+              <inputVariableUsages__CallAction>
+                <variableCharacterisation_VariableUsage type="VALUE">
+                  <specification_VariableCharacterisation specification="image.DEGREE_OF_CORRUPTION.VALUE"/>
+                </variableCharacterisation_VariableUsage>
+                <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="image">
+                  <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="DEGREE_OF_CORRUPTION"/>
                 </namedReference__VariableUsage>
               </inputVariableUsages__CallAction>
             </steps_Behaviour>
@@ -215,7 +291,7 @@
       <extension href="../org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram#_HKHIQBLoEeyoI8sXJPqmjw"/>
       <qualitygate id="_HjQ_sCoAEeywQ_wyQlQHQw" entityName="Processing Time Camera-BrakingControl">
         <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_IdhBdCoAEeywQ_wyQlQHQw" signature="__YfNECnzEeywQ_wyQlQHQw" qualitygate="_C0xQQCoAEeywQ_wyQlQHQw"/>
-        <predicate specification="ProcessingTime.VALUE &lt; 0.08"/>
+        <predicate specification="ProcessingTime.VALUE &lt; 0.1"/>
         <severity href="My.severityhierarchy#_tRawcCd2EeyJ9I_d773-6w"/>
       </qualitygate>
     </stereotypeApplications>
@@ -236,6 +312,11 @@
       <qualitygate id="_T09SkCr3Eey6yagAtv9qzg" entityName="Image Complexity">
         <scope xsi:type="qualitygate:RequestParameterScope" id="_Uux2gCr3Eey6yagAtv9qzg" signature="_7Lx_gCbnEeynLPSQFkGOPQ"/>
         <predicate specification="image.Complexity.VALUE &lt; 4"/>
+      </qualitygate>
+      <qualitygate id="_xR8CcCtOEey86NKfZPe9FA" entityName="Image Degree Of Corruption">
+        <scope xsi:type="qualitygate:RequestParameterScope" id="_2tHRsCtOEey86NKfZPe9FA" signature="_7Lx_gCbnEeynLPSQFkGOPQ"/>
+        <predicate specification="image.DEGREE_OF_CORRUPTION.VALUE &lt; 0.2"/>
+        <impact xsi:type="failuretype:SWCrashFailure" href="My.failuretype#_eq_XICe5Eey2vvABLJYRXg"/>
       </qualitygate>
     </stereotypeApplications>
     <stereotypeApplications xsi:type="org.palladiosimulator.qualitygate:QualitygateElement" appliedTo="__gM3hSbmEeynLPSQFkGOPQ">
