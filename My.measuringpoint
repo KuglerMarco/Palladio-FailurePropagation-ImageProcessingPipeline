@@ -3,7 +3,7 @@
   <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Processing Time Camera-Braking1" resourceURIRepresentation="_C0xQQCoAEeywQ_wyQlQHQw">
     <qualitygate href="PcmStandard.repository#_C0xQQCoAEeywQ_wyQlQHQw"/>
   </measuringPoints>
-  <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Processing Time Camera-Braking" resourceURIRepresentation="_HjQ_sCoAEeywQ_wyQlQHQw">
+  <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Processing Time Camera-BrakingControl" resourceURIRepresentation="_HjQ_sCoAEeywQ_wyQlQHQw">
     <qualitygate href="PcmStandard.repository#_HjQ_sCoAEeywQ_wyQlQHQw"/>
   </measuringPoints>
   <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Camera-Detection" resourceURIRepresentation="_2sgCoCoaEey1ncxHolsSKQ">
@@ -26,5 +26,11 @@
   </measuringPoints>
   <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Processing Time Detection Provided-Required Start" resourceURIRepresentation="_vOcYYCqYEeyjGvjPg6NQ1w">
     <qualitygate href="PcmStandard.repository#_vOcYYCqYEeyjGvjPg6NQ1w"/>
+  </measuringPoints>
+  <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Image Lighting" resourceURIRepresentation="_gdnHsCqgEeypNakyw_-KQQ">
+    <qualitygate href="PcmStandard.repository#_gdnHsCqgEeypNakyw_-KQQ"/>
+  </measuringPoints>
+  <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Image Complexity" resourceURIRepresentation="_T09SkCr3Eey6yagAtv9qzg">
+    <qualitygate href="PcmStandard.repository#_T09SkCr3Eey6yagAtv9qzg"/>
   </measuringPoints>
 </org.palladiosimulator.edp2.models:MeasuringPointRepository>

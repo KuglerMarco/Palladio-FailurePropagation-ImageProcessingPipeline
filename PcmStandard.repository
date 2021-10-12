@@ -43,7 +43,7 @@
         <steps_Behaviour xsi:type="seff:StopAction" id="_PYToYCbWEeynLPSQFkGOPQ" predecessor_AbstractAction="_suN7xSnyEeywQ_wyQlQHQw"/>
         <steps_Behaviour xsi:type="seff:InternalAction" id="_tncX7Cn0EeywQ_wyQlQHQw" entityName="planTrajectory" predecessor_AbstractAction="_OijFEibWEeynLPSQFkGOPQ" successor_AbstractAction="_suN7xSnyEeywQ_wyQlQHQw">
           <resourceDemand_Action>
-            <specification_ParametericResourceDemand specification="10"/>
+            <specification_ParametericResourceDemand specification="image.Objects.NUMBER_OF_ELEMENTS"/>
             <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
           </resourceDemand_Action>
         </steps_Behaviour>
@@ -51,14 +51,7 @@
           <asynchronousForkedBehaviours_ForkAction id="_tEvlYinyEeywQ_wyQlQHQw">
             <steps_Behaviour xsi:type="seff:StartAction" id="_tnJH0inyEeywQ_wyQlQHQw" successor_AbstractAction="_uyEp5inyEeywQ_wyQlQHQw"/>
             <steps_Behaviour xsi:type="seff:StopAction" id="_uaGOwCnyEeywQ_wyQlQHQw" predecessor_AbstractAction="_uyEp5inyEeywQ_wyQlQHQw"/>
-            <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_uyEp5inyEeywQ_wyQlQHQw" entityName="callControlVehicle" predecessor_AbstractAction="_tnJH0inyEeywQ_wyQlQHQw" successor_AbstractAction="_uaGOwCnyEeywQ_wyQlQHQw" calledService_ExternalService="_JcqJwMuwEeOrXJYSTPO-kw" role_ExternalService="_gSvShSnyEeywQ_wyQlQHQw">
-              <inputVariableUsages__CallAction>
-                <variableCharacterisation_VariableUsage type="NUMBER_OF_ELEMENTS">
-                  <specification_VariableCharacterisation specification="objects.NUMBER_OF_ELEMENTS"/>
-                </variableCharacterisation_VariableUsage>
-                <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="objects"/>
-              </inputVariableUsages__CallAction>
-            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_uyEp5inyEeywQ_wyQlQHQw" entityName="callControlVehicle" predecessor_AbstractAction="_tnJH0inyEeywQ_wyQlQHQw" successor_AbstractAction="_uaGOwCnyEeywQ_wyQlQHQw" calledService_ExternalService="_JcqJwMuwEeOrXJYSTPO-kw" role_ExternalService="_gSvShSnyEeywQ_wyQlQHQw"/>
           </asynchronousForkedBehaviours_ForkAction>
         </steps_Behaviour>
       </serviceEffectSpecifications__BasicComponent>
@@ -71,7 +64,7 @@
         <steps_Behaviour xsi:type="seff:StopAction" id="_9xHxcCbkEeynLPSQFkGOPQ" predecessor_AbstractAction="_nVwUMSnwEeywQ_wyQlQHQw"/>
         <steps_Behaviour xsi:type="seff:InternalAction" id="_r4aADCnwEeywQ_wyQlQHQw" entityName="trackObjects" predecessor_AbstractAction="_x-SckibkEeynLPSQFkGOPQ" successor_AbstractAction="_nVwUMSnwEeywQ_wyQlQHQw">
           <resourceDemand_Action>
-            <specification_ParametericResourceDemand specification="10"/>
+            <specification_ParametericResourceDemand specification="image.Objects.NUMBER_OF_ELEMENTS"/>
             <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
           </resourceDemand_Action>
         </steps_Behaviour>
@@ -82,9 +75,11 @@
             <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_sraKRinwEeywQ_wyQlQHQw" entityName="callTrajectoryPlanning" predecessor_AbstractAction="_qn6oginwEeywQ_wyQlQHQw" successor_AbstractAction="_rcAX4CnwEeywQ_wyQlQHQw" calledService_ExternalService="_NQLo0CbXEeynLPSQFkGOPQ" role_ExternalService="__H4b9SbXEeynLPSQFkGOPQ">
               <inputVariableUsages__CallAction>
                 <variableCharacterisation_VariableUsage type="NUMBER_OF_ELEMENTS">
-                  <specification_VariableCharacterisation specification="5"/>
+                  <specification_VariableCharacterisation specification="image.Objects.NUMBER_OF_ELEMENTS"/>
                 </variableCharacterisation_VariableUsage>
-                <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="objects"/>
+                <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="image">
+                  <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="Objects"/>
+                </namedReference__VariableUsage>
               </inputVariableUsages__CallAction>
             </steps_Behaviour>
           </asynchronousForkedBehaviours_ForkAction>
@@ -99,7 +94,7 @@
         <steps_Behaviour xsi:type="seff:StopAction" id="_3XsfUCbmEeynLPSQFkGOPQ" predecessor_AbstractAction="_jBWAFSntEeywQ_wyQlQHQw"/>
         <steps_Behaviour xsi:type="seff:InternalAction" id="_pIsY3CntEeywQ_wyQlQHQw" entityName="detectObject" predecessor_AbstractAction="_2V3O4ibmEeynLPSQFkGOPQ" successor_AbstractAction="_jBWAFSntEeywQ_wyQlQHQw">
           <resourceDemand_Action>
-            <specification_ParametericResourceDemand specification="10 + 1 / image.Exposure.VALUE"/>
+            <specification_ParametericResourceDemand specification="image.Complexity.VALUE + (1 / image.Lighting.VALUE) * 10"/>
             <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
           </resourceDemand_Action>
         </steps_Behaviour>
@@ -109,10 +104,12 @@
             <steps_Behaviour xsi:type="seff:StopAction" id="_otLhgCntEeywQ_wyQlQHQw" predecessor_AbstractAction="_UEyrxinuEeywQ_wyQlQHQw"/>
             <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_UEyrxinuEeywQ_wyQlQHQw" entityName="callTracking" predecessor_AbstractAction="_lP2fAintEeywQ_wyQlQHQw" successor_AbstractAction="_otLhgCntEeywQ_wyQlQHQw" calledService_ExternalService="_zW1cgCbnEeynLPSQFkGOPQ" role_ExternalService="_0w-UtSbmEeynLPSQFkGOPQ">
               <inputVariableUsages__CallAction>
-                <variableCharacterisation_VariableUsage type="BYTESIZE">
-                  <specification_VariableCharacterisation specification="20"/>
+                <variableCharacterisation_VariableUsage type="NUMBER_OF_ELEMENTS">
+                  <specification_VariableCharacterisation specification="image.Complexity.VALUE *IntPMF[(1;0.2)(2;0.3)(3;0.3)(4;0.2)]"/>
                 </variableCharacterisation_VariableUsage>
-                <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="data"/>
+                <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="image">
+                  <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="Objects"/>
+                </namedReference__VariableUsage>
               </inputVariableUsages__CallAction>
             </steps_Behaviour>
           </asynchronousForkedBehaviours_ForkAction>
@@ -123,31 +120,33 @@
       <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_-9XQMSbmEeynLPSQFkGOPQ" entityName="Provided_Camera" providedInterface__OperationProvidedRole="_cnMCiCbsEeynLPSQFkGOPQ"/>
       <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="__gM3hSbmEeynLPSQFkGOPQ" entityName="Required_Camera" requiredInterface__OperationRequiredRole="_12pG2CbnEeynLPSQFkGOPQ"/>
       <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_AipL9ybnEeynLPSQFkGOPQ" describedService__SEFF="_fA0zYCbsEeynLPSQFkGOPQ">
-        <steps_Behaviour xsi:type="seff:StartAction" id="_BJfJgibnEeynLPSQFkGOPQ" successor_AbstractAction="__0tlLCnqEeywQ_wyQlQHQw"/>
+        <steps_Behaviour xsi:type="seff:StartAction" id="_BJfJgibnEeynLPSQFkGOPQ" successor_AbstractAction="_RftR8SnEEeywQ_wyQlQHQw"/>
         <steps_Behaviour xsi:type="seff:StopAction" id="_D5Aq0CbnEeynLPSQFkGOPQ" predecessor_AbstractAction="_RftR8SnEEeywQ_wyQlQHQw"/>
-        <steps_Behaviour xsi:type="seff:InternalAction" id="__0tlLCnqEeywQ_wyQlQHQw" entityName="takingImage" predecessor_AbstractAction="_BJfJgibnEeynLPSQFkGOPQ" successor_AbstractAction="_RftR8SnEEeywQ_wyQlQHQw">
+        <steps_Behaviour xsi:type="seff:InternalAction" id="_PuY4HCryEey6yagAtv9qzg">
           <resourceDemand_Action>
-            <specification_ParametericResourceDemand specification="20"/>
+            <specification_ParametericResourceDemand specification="5"/>
             <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
           </resourceDemand_Action>
         </steps_Behaviour>
-        <steps_Behaviour xsi:type="seff:ForkAction" id="_RftR8SnEEeywQ_wyQlQHQw" entityName="ForkCamera" predecessor_AbstractAction="__0tlLCnqEeywQ_wyQlQHQw" successor_AbstractAction="_D5Aq0CbnEeynLPSQFkGOPQ">
+        <steps_Behaviour xsi:type="seff:ForkAction" id="_RftR8SnEEeywQ_wyQlQHQw" entityName="ForkCamera" predecessor_AbstractAction="_BJfJgibnEeynLPSQFkGOPQ" successor_AbstractAction="_D5Aq0CbnEeynLPSQFkGOPQ">
           <asynchronousForkedBehaviours_ForkAction id="_XeIYMSnEEeywQ_wyQlQHQw">
             <steps_Behaviour xsi:type="seff:StartAction" id="_ZKJ1IinEEeywQ_wyQlQHQw" successor_AbstractAction="_Z4p55inEEeywQ_wyQlQHQw"/>
             <steps_Behaviour xsi:type="seff:StopAction" id="_hVPnQCnEEeywQ_wyQlQHQw" predecessor_AbstractAction="_Z4p55inEEeywQ_wyQlQHQw"/>
             <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_Z4p55inEEeywQ_wyQlQHQw" entityName="callDetection" predecessor_AbstractAction="_ZKJ1IinEEeywQ_wyQlQHQw" successor_AbstractAction="_hVPnQCnEEeywQ_wyQlQHQw" calledService_ExternalService="_7Lx_gCbnEeynLPSQFkGOPQ" role_ExternalService="__gM3hSbmEeynLPSQFkGOPQ">
               <inputVariableUsages__CallAction>
-                <variableCharacterisation_VariableUsage type="BYTESIZE">
-                  <specification_VariableCharacterisation specification="image.BYTESIZE"/>
+                <variableCharacterisation_VariableUsage type="VALUE">
+                  <specification_VariableCharacterisation specification="image.Lighting.VALUE"/>
                 </variableCharacterisation_VariableUsage>
-                <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="image"/>
+                <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="image">
+                  <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="Lighting"/>
+                </namedReference__VariableUsage>
               </inputVariableUsages__CallAction>
               <inputVariableUsages__CallAction>
                 <variableCharacterisation_VariableUsage type="VALUE">
-                  <specification_VariableCharacterisation specification="image.Exposure.VALUE"/>
+                  <specification_VariableCharacterisation specification="image.Complexity.VALUE"/>
                 </variableCharacterisation_VariableUsage>
                 <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="image">
-                  <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="Exposure"/>
+                  <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="Complexity"/>
                 </namedReference__VariableUsage>
               </inputVariableUsages__CallAction>
             </steps_Behaviour>
@@ -214,9 +213,9 @@
     </stereotypeApplications>
     <stereotypeApplications xsi:type="org.palladiosimulator.qualitygate:QualitygateElement" appliedTo="_m6csgSnVEeywQ_wyQlQHQw">
       <extension href="../org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram#_HKHIQBLoEeyoI8sXJPqmjw"/>
-      <qualitygate id="_HjQ_sCoAEeywQ_wyQlQHQw" entityName="Processing Time Camera-Braking">
+      <qualitygate id="_HjQ_sCoAEeywQ_wyQlQHQw" entityName="Processing Time Camera-BrakingControl">
         <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_IdhBdCoAEeywQ_wyQlQHQw" signature="__YfNECnzEeywQ_wyQlQHQw" qualitygate="_C0xQQCoAEeywQ_wyQlQHQw"/>
-        <predicate specification="ProcessingTime.VALUE &lt; 0.075"/>
+        <predicate specification="ProcessingTime.VALUE &lt; 0.08"/>
         <severity href="My.severityhierarchy#_tRawcCd2EeyJ9I_d773-6w"/>
       </qualitygate>
     </stereotypeApplications>
@@ -230,12 +229,20 @@
       <qualitygate id="_vOcYYCqYEeyjGvjPg6NQ1w" entityName="Processing Time Detection Provided-Required Start">
         <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_v3YApCqYEeyjGvjPg6NQ1w" signature="_7Lx_gCbnEeynLPSQFkGOPQ" qualitygate="_XxqdgCqbEeypNakyw_-KQQ"/>
       </qualitygate>
+      <qualitygate id="_gdnHsCqgEeypNakyw_-KQQ" entityName="Image Lighting">
+        <scope xsi:type="qualitygate:RequestParameterScope" id="_hDUc0CqgEeypNakyw_-KQQ" signature="_7Lx_gCbnEeynLPSQFkGOPQ"/>
+        <predicate specification="image.Lighting.VALUE > 0.6"/>
+      </qualitygate>
+      <qualitygate id="_T09SkCr3Eey6yagAtv9qzg" entityName="Image Complexity">
+        <scope xsi:type="qualitygate:RequestParameterScope" id="_Uux2gCr3Eey6yagAtv9qzg" signature="_7Lx_gCbnEeynLPSQFkGOPQ"/>
+        <predicate specification="image.Complexity.VALUE &lt; 4"/>
+      </qualitygate>
     </stereotypeApplications>
     <stereotypeApplications xsi:type="org.palladiosimulator.qualitygate:QualitygateElement" appliedTo="__gM3hSbmEeynLPSQFkGOPQ">
       <extension href="../org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram#_HKGhNBLoEeyoI8sXJPqmjw"/>
       <qualitygate id="_RHhH4ComEeyOt9411N9dxQ" entityName="Camera Provided-Required2">
         <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_RpqLpComEeyOt9411N9dxQ" signature="_7Lx_gCbnEeynLPSQFkGOPQ" qualitygate="_U8a84ComEeyOt9411N9dxQ"/>
-        <predicate specification="ProcessingTime.VALUE &lt; 0.001"/>
+        <predicate specification="ProcessingTime.VALUE &lt; 0.03"/>
       </qualitygate>
     </stereotypeApplications>
     <stereotypeApplications xsi:type="org.palladiosimulator.qualitygate:QualitygateElement" appliedTo="_0w-UtSbmEeynLPSQFkGOPQ">

@@ -63,4 +63,18 @@
     </measurementSpecifications>
     <measuringPoint xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" href="My.measuringpoint#//@measuringPoints.7"/>
   </monitors>
+  <monitors id="_9bzVUCqgEeypNakyw_-KQQ">
+    <measurementSpecifications id="_-n9mcCqgEeypNakyw_-KQQ" triggersSelfAdaptations="false">
+      <metricDescription xsi:type="metricspec:TextualBaseMetricDescription" href="../../plugin/org.palladiosimulator.simulizar.qualitygate/model/qualitygate.metricspec#_biPckAJhEeyupI8CZJs1wg"/>
+      <processingType xsi:type="monitorrepository:FeedThrough" id="_Aai-YCqhEeypNakyw_-KQQ"/>
+    </measurementSpecifications>
+    <measuringPoint xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" href="My.measuringpoint#//@measuringPoints.9"/>
+  </monitors>
+  <monitors id="_SP0EQCr4Eey6yagAtv9qzg">
+    <measurementSpecifications id="_SrO08Cr4Eey6yagAtv9qzg" triggersSelfAdaptations="false">
+      <metricDescription xsi:type="metricspec:TextualBaseMetricDescription" href="../../plugin/org.palladiosimulator.simulizar.qualitygate/model/qualitygate.metricspec#_biPckAJhEeyupI8CZJs1wg"/>
+      <processingType xsi:type="monitorrepository:FeedThrough" id="_ZgFM4Cr4Eey6yagAtv9qzg"/>
+    </measurementSpecifications>
+    <measuringPoint xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" href="My.measuringpoint#//@measuringPoints.10"/>
+  </monitors>
 </monitorrepository:MonitorRepository>
