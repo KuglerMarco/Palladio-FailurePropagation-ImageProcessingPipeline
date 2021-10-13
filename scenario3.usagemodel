@@ -3,24 +3,32 @@
   <usageScenario_UsageModel id="_Iq1BkCupEeydvZe_YhdkLw" entityName="defaultUsageScenario">
     <scenarioBehaviour_UsageScenario id="_Iq1BkSupEeydvZe_YhdkLw" entityName="defaultUsageScenarioBehaviour">
       <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_Iq1BkiupEeydvZe_YhdkLw" successor="_tTVPgCupEeydvZe_YhdkLw"/>
-      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_Iq1BkyupEeydvZe_YhdkLw" predecessor="_PFhNECupEeydvZe_YhdkLw"/>
-      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_PFhNECupEeydvZe_YhdkLw" entityName="EntryLevelSystemCall2" successor="_Iq1BkyupEeydvZe_YhdkLw" predecessor="_tTVPgCupEeydvZe_YhdkLw">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_Iq1BkyupEeydvZe_YhdkLw" predecessor="_tTVPgCupEeydvZe_YhdkLw"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_PFhNECupEeydvZe_YhdkLw" entityName="EntryLevelSystemCall2">
         <providedRole_EntryLevelSystemCall href="scenario3.system#_Vros0CumEeydvZe_YhdkLw"/>
         <operationSignature__EntryLevelSystemCall href="PcmStandard.repository#_mHlwoCugEeydvZe_YhdkLw"/>
-        <inputParameterUsages_EntryLevelSystemCall>
+        <outputParameterUsages_EntryLevelSystemCall>
+          <variableCharacterisation_VariableUsage type="VALUE">
+            <specification_VariableCharacterisation specification="DoublePDF[( 0.2 ; 0.0 ) ( 0.3 ; 0.1 ) ( 0.5 ; 0.2 ) ( 0.7 ; 0.2 ) ( 1.0 ; 0.5 )]"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="image">
+            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="Lighting"/>
+          </namedReference__VariableUsage>
+        </outputParameterUsages_EntryLevelSystemCall>
+        <outputParameterUsages_EntryLevelSystemCall>
           <variableCharacterisation_VariableUsage type="VALUE">
             <specification_VariableCharacterisation specification="IntPMF[(1;0.4)(2;0.3)(3;0.15)(4;0.1)(5;0.05)]"/>
           </variableCharacterisation_VariableUsage>
-          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="sensorData">
+          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="image">
             <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="Complexity"/>
           </namedReference__VariableUsage>
-        </inputParameterUsages_EntryLevelSystemCall>
+        </outputParameterUsages_EntryLevelSystemCall>
       </actions_ScenarioBehaviour>
-      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_tTVPgCupEeydvZe_YhdkLw" entityName="EntryLevelSystemCall1" successor="_PFhNECupEeydvZe_YhdkLw" predecessor="_Iq1BkiupEeydvZe_YhdkLw">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_tTVPgCupEeydvZe_YhdkLw" entityName="EntryLevelSystemCall1" successor="_Iq1BkyupEeydvZe_YhdkLw" predecessor="_Iq1BkiupEeydvZe_YhdkLw">
         <providedRole_EntryLevelSystemCall href="scenario3.system#_TkrAUCumEeydvZe_YhdkLw"/>
         <operationSignature__EntryLevelSystemCall href="PcmStandard.repository#_fA0zYCbsEeynLPSQFkGOPQ"/>
         <inputParameterUsages_EntryLevelSystemCall>
-          <variableCharacterisation_VariableUsage>
+          <variableCharacterisation_VariableUsage type="VALUE">
             <specification_VariableCharacterisation specification="DoublePDF[( 0.2 ; 0.0 ) ( 0.3 ; 0.1 ) ( 0.5 ; 0.2 ) ( 0.7 ; 0.2 ) ( 1.0 ; 0.5 )]"/>
           </variableCharacterisation_VariableUsage>
           <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="image">

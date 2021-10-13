@@ -49,4 +49,11 @@
       <processingRate_ProcessingResourceSpecification specification="1000"/>
     </activeResourceSpecifications_ResourceContainer>
   </resourceContainer_ResourceEnvironment>
+  <resourceContainer_ResourceEnvironment id="_BwqMsywVEeyQJvjJ6J3FXg" entityName="LoadBalancer">
+    <activeResourceSpecifications_ResourceContainer id="_DqussCwVEeyQJvjJ6J3FXg" numberOfReplicas="2">
+      <schedulingPolicy href="pathmap://PCM_MODELS/Palladio.resourcetype#ProcessorSharing"/>
+      <activeResourceType_ActiveResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+      <processingRate_ProcessingResourceSpecification specification="1000"/>
+    </activeResourceSpecifications_ResourceContainer>
+  </resourceContainer_ResourceEnvironment>
 </resourceenvironment:ResourceEnvironment>

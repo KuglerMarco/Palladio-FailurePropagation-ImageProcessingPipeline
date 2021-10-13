@@ -78,7 +78,7 @@
     <measuringPoint xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" href="My.measuringpoint#//@measuringPoints.10"/>
   </monitors>
   <monitors id="_oOOw0CtPEey86NKfZPe9FA">
-    <measurementSpecifications id="_owqvgCtPEey86NKfZPe9FA" triggersSelfAdaptations="false">
+    <measurementSpecifications id="_owqvgCtPEey86NKfZPe9FA">
       <metricDescription xsi:type="metricspec:TextualBaseMetricDescription" href="../../plugin/org.palladiosimulator.simulizar.qualitygate/model/qualitygate.metricspec#_biPckAJhEeyupI8CZJs1wg"/>
       <processingType xsi:type="monitorrepository:FeedThrough" id="_sNT1gCtPEey86NKfZPe9FA"/>
     </measurementSpecifications>

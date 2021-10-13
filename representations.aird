@@ -32,6 +32,7 @@
     <semanticResources>scenario3.allocation</semanticResources>
     <semanticResources>scenario3.usagemodel</semanticResources>
     <semanticResources>scenario3.usagemodel_diagram</semanticResources>
+    <semanticResources>reconfigurations_active/outsource.qvto</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_YC34ECF_EeqYabGLKRlfzA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.palladiosimulator.editors.sirius.repository/description/repository.odesign#//@ownedViewpoints[name='Repository']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_YDgKWSF_EeqYabGLKRlfzA" name="Repository Diagram" repPath="#_YC34ESF_EeqYabGLKRlfzA" changeId="e0f759d7-fadb-452b-bc49-92a3ad34a93f">

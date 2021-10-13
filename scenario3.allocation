@@ -26,12 +26,12 @@
     <resourceContainer_AllocationContext href="default.resourceenvironment#_1Ujg4Cb8EeynLPSQFkGOPQ"/>
     <assemblyContext_AllocationContext href="scenario3.system#_FMmukCumEeydvZe_YhdkLw"/>
   </allocationContexts_Allocation>
-  <allocationContexts_Allocation id="_Wy-xkCu1EeydvZe_YhdkLw">
+  <allocationContexts_Allocation id="_Wy-xkCu1EeydvZe_YhdkLw" entityName="AC_LoadBalancer">
     <resourceContainer_AllocationContext href="default.resourceenvironment#_1Ujg4Cb8EeynLPSQFkGOPQ"/>
-    <assemblyContext_AllocationContext href="scenario3.system#_x5TUECu0EeydvZe_YhdkLw"/>
+    <assemblyContext_AllocationContext href="scenario3.system#_zithcCwuEeybO-os2EZJ2g"/>
   </allocationContexts_Allocation>
-  <allocationContexts_Allocation id="_jw2WMCu1EeydvZe_YhdkLw">
+  <allocationContexts_Allocation id="_Sg_soCwxEeybO-os2EZJ2g" entityName="AC_LoadBalancer">
     <resourceContainer_AllocationContext href="default.resourceenvironment#_1Ujg4Cb8EeynLPSQFkGOPQ"/>
-    <assemblyContext_AllocationContext href="scenario3.system#_50dMwCu0EeydvZe_YhdkLw"/>
+    <assemblyContext_AllocationContext href="scenario3.system#_1juW8CwuEeybO-os2EZJ2g"/>
   </allocationContexts_Allocation>
 </allocation:Allocation>
