@@ -30,7 +30,7 @@
     <resourceContainer_AllocationContext href="default.resourceenvironment#_1Ujg4Cb8EeynLPSQFkGOPQ"/>
     <assemblyContext_AllocationContext href="scenario3.system#_zithcCwuEeybO-os2EZJ2g"/>
   </allocationContexts_Allocation>
-  <allocationContexts_Allocation id="_Sg_soCwxEeybO-os2EZJ2g" entityName="AC_LoadBalancer">
+  <allocationContexts_Allocation id="_Sg_soCwxEeybO-os2EZJ2g" entityName="AC_LoadBalancer2">
     <resourceContainer_AllocationContext href="default.resourceenvironment#_1Ujg4Cb8EeynLPSQFkGOPQ"/>
     <assemblyContext_AllocationContext href="scenario3.system#_1juW8CwuEeybO-os2EZJ2g"/>
   </allocationContexts_Allocation>

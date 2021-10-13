@@ -40,8 +40,8 @@ transformation outsource(	in runtimeMeasurement : RUNTIMEMEASUREMENT,
 							
 							
 	// Define Threshold and Scale Out
-	property threshold : Real = 2.0;
-	property outsourceFactor : Real = 0.5;
+	property threshold : Real = 0.5;
+	property outsourceFactor : Real = 1.0;
 
 	/**
 	 * The main transformation.
@@ -91,8 +91,32 @@ transformation outsource(	in runtimeMeasurement : RUNTIMEMEASUREMENT,
 	log('Found ' +  allocationContexts->size().toString() + ' AllocationContexts');
 	
 		allocationContexts->forEach(allocation){
+		log('Found ' +  allocationContexts->size().toString() + ' AllocationContexts');
 
-			if( allocation.assemblyContext_AllocationContext.entityName = "AC_LoadBalancer" ) {
+			if( allocation.assemblyContext_AllocationContext.entityName = "Assembly_Object Detection <Object Detection>" ) {
+			log('Found 2');
+			
+				allocation.assemblyContext_AllocationContext.encapsulatedComponent__AssemblyContext.oclAsType(BasicComponent).serviceEffectSpecifications__BasicComponent->forEach(seff) {
+					if(seff.oclIsTypeOf(ResourceDemandingSEFF)) {
+						var branch1 : ProbabilisticBranchTransition = seff.allSubobjects()[ProbabilisticBranchTransition]->any(entityName="delegateToServer1");
+						log('Branch1: ' + branch1.toString());
+						var branch2 : ProbabilisticBranchTransition = seff.allSubobjects()[ProbabilisticBranchTransition]->any(entityName="delegateToServer2");
+						log('Branch2: ' + branch2.toString());
+						if(branch2.branchProbability < 0.5 and branch1.branchProbability > 0.5) {
+						log('Balancing Load...');
+							branch2.branchProbability := branch2.branchProbability + outsourceFactor;
+							log('Set branchProbability to ' + branch2.branchProbability.toString());
+							branch1.branchProbability := branch1.branchProbability - outsourceFactor;
+							log('Set branchProbability to ' + branch1.branchProbability.toString());
+						};
+					}
+				}
+			}
+		};
+		
+		allocationContexts->forEach(allocation){
+
+			if( allocation.assemblyContext_AllocationContext.entityName = "Assembly_ObjectDetectionLidar <ObjectDetectionLidar>" ) {
 			
 				allocation.assemblyContext_AllocationContext.encapsulatedComponent__AssemblyContext.oclAsType(BasicComponent).serviceEffectSpecifications__BasicComponent->forEach(seff) {
 					if(seff.oclIsTypeOf(ResourceDemandingSEFF)) {

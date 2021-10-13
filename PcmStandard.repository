@@ -121,7 +121,7 @@
               </steps_Behaviour>
             </branchBehaviour_BranchTransition>
           </branches_Branch>
-          <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_c7UTQiwtEeybO-os2EZJ2g" entityName="delegateServer2">
+          <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_c7UTQiwtEeybO-os2EZJ2g" entityName="delegateToServer2">
             <branchBehaviour_BranchTransition id="_lRrhQCwtEeybO-os2EZJ2g">
               <steps_Behaviour xsi:type="seff:StartAction" id="_m73yMSwtEeybO-os2EZJ2g" successor_AbstractAction="_nY33QCwtEeybO-os2EZJ2g"/>
               <steps_Behaviour xsi:type="seff:StopAction" id="_nY33QCwtEeybO-os2EZJ2g" predecessor_AbstractAction="_m73yMSwtEeybO-os2EZJ2g"/>
@@ -304,7 +304,16 @@
           <asynchronousForkedBehaviours_ForkAction id="_otg0kiuhEeydvZe_YhdkLw">
             <steps_Behaviour xsi:type="seff:StartAction" id="_ykF4IiuhEeydvZe_YhdkLw" successor_AbstractAction="_zt5_5iuhEeydvZe_YhdkLw"/>
             <steps_Behaviour xsi:type="seff:StopAction" id="_y-3IkCuhEeydvZe_YhdkLw" predecessor_AbstractAction="_zt5_5iuhEeydvZe_YhdkLw"/>
-            <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_zt5_5iuhEeydvZe_YhdkLw" entityName="callDetectObjectLidar" predecessor_AbstractAction="_ykF4IiuhEeydvZe_YhdkLw" successor_AbstractAction="_y-3IkCuhEeydvZe_YhdkLw" calledService_ExternalService="_7Lx_gCbnEeynLPSQFkGOPQ" role_ExternalService="_ZUlYMiugEeydvZe_YhdkLw"/>
+            <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_zt5_5iuhEeydvZe_YhdkLw" entityName="callDetectObjectLidar" predecessor_AbstractAction="_ykF4IiuhEeydvZe_YhdkLw" successor_AbstractAction="_y-3IkCuhEeydvZe_YhdkLw" calledService_ExternalService="_Pf-dkCwvEeybO-os2EZJ2g" role_ExternalService="_ZUlYMiugEeydvZe_YhdkLw">
+              <inputVariableUsages__CallAction>
+                <variableCharacterisation_VariableUsage type="VALUE">
+                  <specification_VariableCharacterisation specification="image.Complexity.VALUE"/>
+                </variableCharacterisation_VariableUsage>
+                <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="image">
+                  <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="Complexity"/>
+                </namedReference__VariableUsage>
+              </inputVariableUsages__CallAction>
+            </steps_Behaviour>
           </asynchronousForkedBehaviours_ForkAction>
         </steps_Behaviour>
       </serviceEffectSpecifications__BasicComponent>
@@ -330,9 +339,7 @@
     </interfaces__Repository>
     <interfaces__Repository xsi:type="repository:OperationInterface" id="_ue3oCCbnEeynLPSQFkGOPQ" entityName="IObjectTracking">
       <signatures__OperationInterface id="_zW1cgCbnEeynLPSQFkGOPQ" entityName="trackObject">
-        <parameters__OperationSignature parameterName="data">
-          <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
-        </parameters__OperationSignature>
+        <parameters__OperationSignature dataType__Parameter="_rbS2wCwgEeyQJvjJ6J3FXg" parameterName="image"/>
         <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
       </signatures__OperationInterface>
     </interfaces__Repository>
@@ -359,16 +366,8 @@
       </signatures__OperationInterface>
     </interfaces__Repository>
     <interfaces__Repository xsi:type="repository:OperationInterface" id="_gUTjZyugEeydvZe_YhdkLw" entityName="ILidar">
-      <signatures__OperationInterface id="_mHlwoCugEeydvZe_YhdkLw" entityName="takeShot">
+      <signatures__OperationInterface id="_mHlwoCugEeydvZe_YhdkLw" entityName="takeShot" returnType__OperationSignature="_rbS2wCwgEeyQJvjJ6J3FXg">
         <parameters__OperationSignature dataType__Parameter="_rbS2wCwgEeyQJvjJ6J3FXg" parameterName="image"/>
-        <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
-      </signatures__OperationInterface>
-    </interfaces__Repository>
-    <interfaces__Repository xsi:type="repository:OperationInterface" id="_IYTfdyuvEeydvZe_YhdkLw" entityName="ISensorFusion">
-      <signatures__OperationInterface id="_Kpb0kCuvEeydvZe_YhdkLw" entityName="fuse">
-        <parameters__OperationSignature parameterName="image">
-          <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
-        </parameters__OperationSignature>
       </signatures__OperationInterface>
     </interfaces__Repository>
     <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_rbS2wCwgEeyQJvjJ6J3FXg" entityName="Image">
@@ -381,36 +380,8 @@
     </dataTypes__Repository>
   </repository:Repository>
   <emfprofileapplication:ProfileApplication>
-    <stereotypeApplications xsi:type="org.palladiosimulator.qualitygate:QualitygateElement" appliedTo="_-9XQMSbmEeynLPSQFkGOPQ">
-      <extension href="../org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram#_HKHIQBLoEeyoI8sXJPqmjw"/>
-      <qualitygate id="_C0xQQCoAEeywQ_wyQlQHQw" entityName="Processing Time Camera-Braking1">
-        <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_DHFIRCoAEeywQ_wyQlQHQw" signature="_fA0zYCbsEeynLPSQFkGOPQ" qualitygate="_HjQ_sCoAEeywQ_wyQlQHQw"/>
-      </qualitygate>
-      <qualitygate id="_2sgCoCoaEey1ncxHolsSKQ" entityName="Camera-Detection">
-        <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_9-m-VCoaEey1ncxHolsSKQ" signature="_fA0zYCbsEeynLPSQFkGOPQ" qualitygate="_8Fv_QCoaEey1ncxHolsSKQ"/>
-      </qualitygate>
-      <qualitygate id="_U8a84ComEeyOt9411N9dxQ" entityName="Camera Provided-Required">
-        <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_XrEUdComEeyOt9411N9dxQ" signature="_fA0zYCbsEeynLPSQFkGOPQ" qualitygate="_RHhH4ComEeyOt9411N9dxQ"/>
-      </qualitygate>
-    </stereotypeApplications>
-    <stereotypeApplications xsi:type="org.palladiosimulator.qualitygate:QualitygateElement" appliedTo="_m6csgSnVEeywQ_wyQlQHQw">
-      <extension href="../org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram#_HKHIQBLoEeyoI8sXJPqmjw"/>
-      <qualitygate id="_HjQ_sCoAEeywQ_wyQlQHQw" entityName="Processing Time Camera-BrakingControl">
-        <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_IdhBdCoAEeywQ_wyQlQHQw" signature="__YfNECnzEeywQ_wyQlQHQw" qualitygate="_C0xQQCoAEeywQ_wyQlQHQw"/>
-        <predicate specification="ProcessingTime.VALUE &lt; 0.1"/>
-        <severity href="My.severityhierarchy#_tRawcCd2EeyJ9I_d773-6w"/>
-      </qualitygate>
-    </stereotypeApplications>
     <stereotypeApplications xsi:type="org.palladiosimulator.qualitygate:QualitygateElement" appliedTo="_zy_pgSbmEeynLPSQFkGOPQ">
       <extension href="../org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram#_HKHIQBLoEeyoI8sXJPqmjw"/>
-      <qualitygate id="_8Fv_QCoaEey1ncxHolsSKQ" entityName="Camera-Detection2">
-        <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_ALZmBCobEey1ncxHolsSKQ" signature="_7Lx_gCbnEeynLPSQFkGOPQ" qualitygate="_2sgCoCoaEey1ncxHolsSKQ"/>
-        <predicate specification="ProcessingTime.VALUE &lt; 0.075"/>
-        <severity href="My.severityhierarchy#_tRawcCd2EeyJ9I_d773-6w"/>
-      </qualitygate>
-      <qualitygate id="_vOcYYCqYEeyjGvjPg6NQ1w" entityName="Processing Time Detection Provided-Required Start">
-        <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_v3YApCqYEeyjGvjPg6NQ1w" signature="_7Lx_gCbnEeynLPSQFkGOPQ" qualitygate="_XxqdgCqbEeypNakyw_-KQQ"/>
-      </qualitygate>
       <qualitygate id="_gdnHsCqgEeypNakyw_-KQQ" entityName="Image Lighting">
         <scope xsi:type="qualitygate:RequestParameterScope" id="_hDUc0CqgEeypNakyw_-KQQ" signature="_7Lx_gCbnEeynLPSQFkGOPQ"/>
         <predicate specification="image.Lighting.VALUE > 0.6"/>
@@ -425,18 +396,30 @@
         <impact xsi:type="failuretype:SWCrashFailure" href="My.failuretype#_eq_XICe5Eey2vvABLJYRXg"/>
       </qualitygate>
     </stereotypeApplications>
-    <stereotypeApplications xsi:type="org.palladiosimulator.qualitygate:QualitygateElement" appliedTo="__gM3hSbmEeynLPSQFkGOPQ">
-      <extension href="../org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram#_HKGhNBLoEeyoI8sXJPqmjw"/>
-      <qualitygate id="_RHhH4ComEeyOt9411N9dxQ" entityName="Camera Provided-Required2">
-        <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_RpqLpComEeyOt9411N9dxQ" signature="_7Lx_gCbnEeynLPSQFkGOPQ" qualitygate="_U8a84ComEeyOt9411N9dxQ"/>
-        <predicate specification="ProcessingTime.VALUE &lt; 0.03"/>
+    <stereotypeApplications xsi:type="org.palladiosimulator.qualitygate:QualitygateElement" appliedTo="_6TQhQSbVEeynLPSQFkGOPQ">
+      <extension href="../org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram#_HKHIQBLoEeyoI8sXJPqmjw"/>
+      <qualitygate id="_Pm_fMCxpEeyz8pshM-h9jQ" entityName="Test1">
+        <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_Qyj6dCxpEeyz8pshM-h9jQ" signature="_NQLo0CbXEeynLPSQFkGOPQ" qualitygate="_QXzRECxpEeyz8pshM-h9jQ"/>
       </qualitygate>
     </stereotypeApplications>
-    <stereotypeApplications xsi:type="org.palladiosimulator.qualitygate:QualitygateElement" appliedTo="_0w-UtSbmEeynLPSQFkGOPQ">
-      <extension href="../org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram#_HKGhNBLoEeyoI8sXJPqmjw"/>
-      <qualitygate id="_XxqdgCqbEeypNakyw_-KQQ" entityName="Processing Time Detection Provided-Required">
-        <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_YFoiZCqbEeypNakyw_-KQQ" signature="_zW1cgCbnEeynLPSQFkGOPQ" qualitygate="_vOcYYCqYEeyjGvjPg6NQ1w"/>
-        <predicate specification="ProcessingTime.VALUE &lt; 0.015"/>
+    <stereotypeApplications xsi:type="org.palladiosimulator.qualitygate:QualitygateElement" appliedTo="_ifx4ASnVEeywQ_wyQlQHQw">
+      <extension href="../org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram#_HKHIQBLoEeyoI8sXJPqmjw"/>
+      <qualitygate id="_QXzRECxpEeyz8pshM-h9jQ" entityName="Test">
+        <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_UGM1dCxpEeyz8pshM-h9jQ" signature="_JcqJwMuwEeOrXJYSTPO-kw" qualitygate="_Pm_fMCxpEeyz8pshM-h9jQ"/>
+        <predicate specification="ProcessingTime.VALUE &lt; 0.001"/>
+      </qualitygate>
+    </stereotypeApplications>
+    <stereotypeApplications xsi:type="org.palladiosimulator.qualitygate:QualitygateElement" appliedTo="_Y5KAcSugEeydvZe_YhdkLw">
+      <extension href="../org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram#_HKHIQBLoEeyoI8sXJPqmjw"/>
+      <qualitygate id="_gVFwACxwEeyz8pshM-h9jQ" entityName="Lidar - Braking 1">
+        <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_g6mQ1CxwEeyz8pshM-h9jQ" signature="_mHlwoCugEeydvZe_YhdkLw" qualitygate="_gqO5kCxwEeyz8pshM-h9jQ"/>
+      </qualitygate>
+    </stereotypeApplications>
+    <stereotypeApplications xsi:type="org.palladiosimulator.qualitygate:QualitygateElement" appliedTo="_m6csgSnVEeywQ_wyQlQHQw">
+      <extension href="../org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram#_HKHIQBLoEeyoI8sXJPqmjw"/>
+      <qualitygate id="_gqO5kCxwEeyz8pshM-h9jQ" entityName="Lidar - Braking">
+        <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_hgelFCxwEeyz8pshM-h9jQ" signature="__YfNECnzEeywQ_wyQlQHQw" qualitygate="_gVFwACxwEeyz8pshM-h9jQ"/>
+        <predicate specification="ProcessingTime.VALUE &lt; 1.0E-4"/>
       </qualitygate>
     </stereotypeApplications>
     <importedProfiles nsURI="http://www.palladiosimulator.org/qualitygateprofile/1.0" location="platform:/resource/org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram"/>
