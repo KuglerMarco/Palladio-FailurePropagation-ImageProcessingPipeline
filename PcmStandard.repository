@@ -138,7 +138,7 @@
         <steps_Behaviour xsi:type="seff:StopAction" id="_k5UWgCwrEeybO-os2EZJ2g" predecessor_AbstractAction="__Fw1QSwrEeybO-os2EZJ2g"/>
         <steps_Behaviour xsi:type="seff:InternalAction" id="_obZWLCwrEeybO-os2EZJ2g" entityName="computeDetectionLidar" predecessor_AbstractAction="_kLsbgiwrEeybO-os2EZJ2g" successor_AbstractAction="__Fw1QSwrEeybO-os2EZJ2g">
           <resourceDemand_Action>
-            <specification_ParametericResourceDemand specification="10"/>
+            <specification_ParametericResourceDemand specification="50 + image.Complexity.VALUE *IntPMF[(1;0.2)(2;0.2)(3;0.2)(4;0.2)(5;0.2)]"/>
             <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
           </resourceDemand_Action>
         </steps_Behaviour>
@@ -384,11 +384,11 @@
       <extension href="../org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram#_HKHIQBLoEeyoI8sXJPqmjw"/>
       <qualitygate id="_gdnHsCqgEeypNakyw_-KQQ" entityName="Image Lighting">
         <scope xsi:type="qualitygate:RequestParameterScope" id="_hDUc0CqgEeypNakyw_-KQQ" signature="_7Lx_gCbnEeynLPSQFkGOPQ"/>
-        <predicate specification="image.Lighting.VALUE > 0.6"/>
+        <predicate specification="image.Lighting.VALUE > 0.8"/>
       </qualitygate>
       <qualitygate id="_T09SkCr3Eey6yagAtv9qzg" entityName="Image Complexity">
         <scope xsi:type="qualitygate:RequestParameterScope" id="_Uux2gCr3Eey6yagAtv9qzg" signature="_7Lx_gCbnEeynLPSQFkGOPQ"/>
-        <predicate specification="image.Complexity.VALUE &lt; 4"/>
+        <predicate specification="image.Complexity.VALUE &lt; 3"/>
       </qualitygate>
       <qualitygate id="_xR8CcCtOEey86NKfZPe9FA" entityName="Image Degree Of Corruption">
         <scope xsi:type="qualitygate:RequestParameterScope" id="_2tHRsCtOEey86NKfZPe9FA" signature="_7Lx_gCbnEeynLPSQFkGOPQ"/>
@@ -415,11 +415,21 @@
         <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_g6mQ1CxwEeyz8pshM-h9jQ" signature="_mHlwoCugEeydvZe_YhdkLw" qualitygate="_gqO5kCxwEeyz8pshM-h9jQ"/>
       </qualitygate>
     </stereotypeApplications>
+    <stereotypeApplications xsi:type="org.palladiosimulator.qualitygate:QualitygateElement" appliedTo="_-9XQMSbmEeynLPSQFkGOPQ">
+      <extension href="../org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram#_HKHIQBLoEeyoI8sXJPqmjw"/>
+      <qualitygate id="_wfH8YCx1Eeyz8pshM-h9jQ" entityName="Processing Time Camera - BrakingControl 1">
+        <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_wzyk1Cx1Eeyz8pshM-h9jQ" signature="_fA0zYCbsEeynLPSQFkGOPQ" qualitygate="_3jNqMCx1Eeyz8pshM-h9jQ"/>
+      </qualitygate>
+    </stereotypeApplications>
     <stereotypeApplications xsi:type="org.palladiosimulator.qualitygate:QualitygateElement" appliedTo="_m6csgSnVEeywQ_wyQlQHQw">
       <extension href="../org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram#_HKHIQBLoEeyoI8sXJPqmjw"/>
       <qualitygate id="_gqO5kCxwEeyz8pshM-h9jQ" entityName="Lidar - Braking">
         <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_hgelFCxwEeyz8pshM-h9jQ" signature="__YfNECnzEeywQ_wyQlQHQw" qualitygate="_gVFwACxwEeyz8pshM-h9jQ"/>
-        <predicate specification="ProcessingTime.VALUE &lt; 1.0E-4"/>
+        <predicate specification="ProcessingTime.VALUE &lt; 0.15"/>
+      </qualitygate>
+      <qualitygate id="_3jNqMCx1Eeyz8pshM-h9jQ" entityName="Processing Time Camera - BrakingControl">
+        <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_39B4ZCx1Eeyz8pshM-h9jQ" signature="__YfNECnzEeywQ_wyQlQHQw" qualitygate="_wfH8YCx1Eeyz8pshM-h9jQ"/>
+        <predicate specification="ProcessingTime.VALUE &lt; 0.15"/>
       </qualitygate>
     </stereotypeApplications>
     <importedProfiles nsURI="http://www.palladiosimulator.org/qualitygateprofile/1.0" location="platform:/resource/org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram"/>

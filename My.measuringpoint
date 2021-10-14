@@ -24,4 +24,10 @@
   <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Lidar - Braking" resourceURIRepresentation="_gqO5kCxwEeyz8pshM-h9jQ">
     <qualitygate href="PcmStandard.repository#_gqO5kCxwEeyz8pshM-h9jQ"/>
   </measuringPoints>
+  <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Processing Time Camera - BrakingControl 1" resourceURIRepresentation="_wfH8YCx1Eeyz8pshM-h9jQ">
+    <qualitygate href="PcmStandard.repository#_wfH8YCx1Eeyz8pshM-h9jQ"/>
+  </measuringPoints>
+  <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Processing Time Camera - BrakingControl" resourceURIRepresentation="_3jNqMCx1Eeyz8pshM-h9jQ">
+    <qualitygate href="PcmStandard.repository#_3jNqMCx1Eeyz8pshM-h9jQ"/>
+  </measuringPoints>
 </org.palladiosimulator.edp2.models:MeasuringPointRepository>
