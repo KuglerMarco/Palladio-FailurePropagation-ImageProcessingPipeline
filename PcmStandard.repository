@@ -99,7 +99,7 @@
           </resourceDemand_Action>
         </steps_Behaviour>
         <steps_Behaviour xsi:type="seff:BranchAction" id="_aoZOYSwtEeybO-os2EZJ2g" entityName="branchDetectionCamera" predecessor_AbstractAction="_pIsY3CntEeywQ_wyQlQHQw" successor_AbstractAction="_3XsfUCbmEeynLPSQFkGOPQ">
-          <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_b7qNEiwtEeybO-os2EZJ2g" entityName="delegateToServer1" branchProbability="1.0">
+          <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_b7qNEiwtEeybO-os2EZJ2g" entityName="delegate1" branchProbability="1.0">
             <branchBehaviour_BranchTransition id="_hotPcCwtEeybO-os2EZJ2g">
               <steps_Behaviour xsi:type="seff:StartAction" id="_rWC3ciwtEeybO-os2EZJ2g" successor_AbstractAction="_jBWAFSntEeywQ_wyQlQHQw"/>
               <steps_Behaviour xsi:type="seff:StopAction" id="_r1J1UCwtEeybO-os2EZJ2g" predecessor_AbstractAction="_jBWAFSntEeywQ_wyQlQHQw"/>
@@ -121,7 +121,7 @@
               </steps_Behaviour>
             </branchBehaviour_BranchTransition>
           </branches_Branch>
-          <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_c7UTQiwtEeybO-os2EZJ2g" entityName="delegateToServer2">
+          <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_c7UTQiwtEeybO-os2EZJ2g" entityName="delegate2">
             <branchBehaviour_BranchTransition id="_lRrhQCwtEeybO-os2EZJ2g">
               <steps_Behaviour xsi:type="seff:StartAction" id="_m73yMSwtEeybO-os2EZJ2g" successor_AbstractAction="_nY33QCwtEeybO-os2EZJ2g"/>
               <steps_Behaviour xsi:type="seff:StopAction" id="_nY33QCwtEeybO-os2EZJ2g" predecessor_AbstractAction="_m73yMSwtEeybO-os2EZJ2g"/>
@@ -138,18 +138,18 @@
         <steps_Behaviour xsi:type="seff:StopAction" id="_k5UWgCwrEeybO-os2EZJ2g" predecessor_AbstractAction="__Fw1QSwrEeybO-os2EZJ2g"/>
         <steps_Behaviour xsi:type="seff:InternalAction" id="_obZWLCwrEeybO-os2EZJ2g" entityName="computeDetectionLidar" predecessor_AbstractAction="_kLsbgiwrEeybO-os2EZJ2g" successor_AbstractAction="__Fw1QSwrEeybO-os2EZJ2g">
           <resourceDemand_Action>
-            <specification_ParametericResourceDemand specification="50 + image.Complexity.VALUE *IntPMF[(1;0.2)(2;0.2)(3;0.2)(4;0.2)(5;0.2)]"/>
+            <specification_ParametericResourceDemand specification="75 + image.Complexity.VALUE *IntPMF[(1;0.2)(2;0.2)(3;0.2)(4;0.2)(5;0.2)]"/>
             <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
           </resourceDemand_Action>
         </steps_Behaviour>
         <steps_Behaviour xsi:type="seff:BranchAction" id="__Fw1QSwrEeybO-os2EZJ2g" entityName="branchObjectDetectionLidar" predecessor_AbstractAction="_obZWLCwrEeybO-os2EZJ2g" successor_AbstractAction="_k5UWgCwrEeybO-os2EZJ2g">
-          <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_PBVhIiwsEeybO-os2EZJ2g" entityName="delegateToServer1" branchProbability="1.0">
+          <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_PBVhIiwsEeybO-os2EZJ2g" entityName="delegate1" branchProbability="1.0">
             <branchBehaviour_BranchTransition id="_goV0ECwsEeybO-os2EZJ2g">
               <steps_Behaviour xsi:type="seff:StartAction" id="_j8LjYiwsEeybO-os2EZJ2g" successor_AbstractAction="_kna4wCwsEeybO-os2EZJ2g"/>
               <steps_Behaviour xsi:type="seff:StopAction" id="_kna4wCwsEeybO-os2EZJ2g" predecessor_AbstractAction="_j8LjYiwsEeybO-os2EZJ2g"/>
             </branchBehaviour_BranchTransition>
           </branches_Branch>
-          <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_wcWYAiwvEeybO-os2EZJ2g" entityName="delegateToServer2">
+          <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_wcWYAiwvEeybO-os2EZJ2g" entityName="delegate2">
             <branchBehaviour_BranchTransition id="_w_ZasCwvEeybO-os2EZJ2g">
               <steps_Behaviour xsi:type="seff:StartAction" id="_Jt-7siwtEeybO-os2EZJ2g" successor_AbstractAction="__2tUlSwsEeybO-os2EZJ2g"/>
               <steps_Behaviour xsi:type="seff:StopAction" id="_KnU-gCwtEeybO-os2EZJ2g" predecessor_AbstractAction="__2tUlSwsEeybO-os2EZJ2g"/>
@@ -380,6 +380,13 @@
     </dataTypes__Repository>
   </repository:Repository>
   <emfprofileapplication:ProfileApplication>
+    <stereotypeApplications xsi:type="org.palladiosimulator.qualitygate:QualitygateElement" appliedTo="_RXmqYSwrEeybO-os2EZJ2g">
+      <extension href="../org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram#_HKHIQBLoEeyoI8sXJPqmjw"/>
+      <qualitygate id="_7jonEC1DEeyj39e71X-coQ" entityName="Image Complexity">
+        <scope xsi:type="qualitygate:RequestParameterScope" id="_8OPDQC1DEeyj39e71X-coQ" signature="_Pf-dkCwvEeybO-os2EZJ2g"/>
+        <predicate specification="image.Complexity.VALUE &lt; 3"/>
+      </qualitygate>
+    </stereotypeApplications>
     <stereotypeApplications xsi:type="org.palladiosimulator.qualitygate:QualitygateElement" appliedTo="_zy_pgSbmEeynLPSQFkGOPQ">
       <extension href="../org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram#_HKHIQBLoEeyoI8sXJPqmjw"/>
       <qualitygate id="_gdnHsCqgEeypNakyw_-KQQ" entityName="Image Lighting">
@@ -396,40 +403,51 @@
         <impact xsi:type="failuretype:SWCrashFailure" href="My.failuretype#_eq_XICe5Eey2vvABLJYRXg"/>
       </qualitygate>
     </stereotypeApplications>
-    <stereotypeApplications xsi:type="org.palladiosimulator.qualitygate:QualitygateElement" appliedTo="_6TQhQSbVEeynLPSQFkGOPQ">
-      <extension href="../org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram#_HKHIQBLoEeyoI8sXJPqmjw"/>
-      <qualitygate id="_Pm_fMCxpEeyz8pshM-h9jQ" entityName="Test1">
-        <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_Qyj6dCxpEeyz8pshM-h9jQ" signature="_NQLo0CbXEeynLPSQFkGOPQ" qualitygate="_QXzRECxpEeyz8pshM-h9jQ"/>
-      </qualitygate>
-    </stereotypeApplications>
-    <stereotypeApplications xsi:type="org.palladiosimulator.qualitygate:QualitygateElement" appliedTo="_ifx4ASnVEeywQ_wyQlQHQw">
-      <extension href="../org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram#_HKHIQBLoEeyoI8sXJPqmjw"/>
-      <qualitygate id="_QXzRECxpEeyz8pshM-h9jQ" entityName="Test">
-        <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_UGM1dCxpEeyz8pshM-h9jQ" signature="_JcqJwMuwEeOrXJYSTPO-kw" qualitygate="_Pm_fMCxpEeyz8pshM-h9jQ"/>
-        <predicate specification="ProcessingTime.VALUE &lt; 0.001"/>
-      </qualitygate>
-    </stereotypeApplications>
     <stereotypeApplications xsi:type="org.palladiosimulator.qualitygate:QualitygateElement" appliedTo="_Y5KAcSugEeydvZe_YhdkLw">
       <extension href="../org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram#_HKHIQBLoEeyoI8sXJPqmjw"/>
-      <qualitygate id="_gVFwACxwEeyz8pshM-h9jQ" entityName="Lidar - Braking 1">
+      <qualitygate id="_gVFwACxwEeyz8pshM-h9jQ" entityName="Processing Time Lidar - BrakingControl Minor Impact Start">
         <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_g6mQ1CxwEeyz8pshM-h9jQ" signature="_mHlwoCugEeydvZe_YhdkLw" qualitygate="_gqO5kCxwEeyz8pshM-h9jQ"/>
+      </qualitygate>
+      <qualitygate id="_XL584C0_Eeyj39e71X-coQ" entityName="Processing Time Lidar - BrakingControl NoImpact Start">
+        <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_jmjftC0_Eeyj39e71X-coQ" signature="_mHlwoCugEeydvZe_YhdkLw" qualitygate="_lLlj0C0_Eeyj39e71X-coQ"/>
       </qualitygate>
     </stereotypeApplications>
     <stereotypeApplications xsi:type="org.palladiosimulator.qualitygate:QualitygateElement" appliedTo="_-9XQMSbmEeynLPSQFkGOPQ">
       <extension href="../org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram#_HKHIQBLoEeyoI8sXJPqmjw"/>
-      <qualitygate id="_wfH8YCx1Eeyz8pshM-h9jQ" entityName="Processing Time Camera - BrakingControl 1">
+      <qualitygate id="_wfH8YCx1Eeyz8pshM-h9jQ" entityName="Processing Time Camera - BrakingControl Minor Impact Start">
         <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_wzyk1Cx1Eeyz8pshM-h9jQ" signature="_fA0zYCbsEeynLPSQFkGOPQ" qualitygate="_3jNqMCx1Eeyz8pshM-h9jQ"/>
+      </qualitygate>
+      <qualitygate id="_oD1yEC05Eeyj39e71X-coQ" entityName="Processing Time Camera - BrakingControl NoImpact Start">
+        <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_pAzJlC05Eeyj39e71X-coQ" signature="_fA0zYCbsEeynLPSQFkGOPQ" qualitygate="_td9RYC05Eeyj39e71X-coQ"/>
+      </qualitygate>
+      <qualitygate id="_CZqkYC08Eeyj39e71X-coQ" entityName="Processing Time Camera - BrakingControl Critical Impact Start">
+        <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_C45eFC08Eeyj39e71X-coQ" signature="_fA0zYCbsEeynLPSQFkGOPQ" qualitygate="_EJ-EYC08Eeyj39e71X-coQ"/>
       </qualitygate>
     </stereotypeApplications>
     <stereotypeApplications xsi:type="org.palladiosimulator.qualitygate:QualitygateElement" appliedTo="_m6csgSnVEeywQ_wyQlQHQw">
       <extension href="../org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram#_HKHIQBLoEeyoI8sXJPqmjw"/>
-      <qualitygate id="_gqO5kCxwEeyz8pshM-h9jQ" entityName="Lidar - Braking">
+      <qualitygate id="_gqO5kCxwEeyz8pshM-h9jQ" entityName="Processing Time Lidar - BrakingControl Minor Impact">
         <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_hgelFCxwEeyz8pshM-h9jQ" signature="__YfNECnzEeywQ_wyQlQHQw" qualitygate="_gVFwACxwEeyz8pshM-h9jQ"/>
         <predicate specification="ProcessingTime.VALUE &lt; 0.15"/>
       </qualitygate>
-      <qualitygate id="_3jNqMCx1Eeyz8pshM-h9jQ" entityName="Processing Time Camera - BrakingControl">
+      <qualitygate id="_3jNqMCx1Eeyz8pshM-h9jQ" entityName="Processing Time Camera - BrakingControl Minor Impact">
         <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_39B4ZCx1Eeyz8pshM-h9jQ" signature="__YfNECnzEeywQ_wyQlQHQw" qualitygate="_wfH8YCx1Eeyz8pshM-h9jQ"/>
         <predicate specification="ProcessingTime.VALUE &lt; 0.15"/>
+        <severity href="My.severityhierarchy#_vmysYCd2EeyJ9I_d773-6w"/>
+      </qualitygate>
+      <qualitygate id="_td9RYC05Eeyj39e71X-coQ" entityName="Processing Time Camera - BrakingControl NoImpact">
+        <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_0KQxVC05Eeyj39e71X-coQ" signature="__YfNECnzEeywQ_wyQlQHQw" qualitygate="_oD1yEC05Eeyj39e71X-coQ"/>
+        <predicate specification="ProcessingTime.VALUE &lt; 0.1"/>
+        <severity href="My.severityhierarchy#_tRawcCd2EeyJ9I_d773-6w"/>
+      </qualitygate>
+      <qualitygate id="_EJ-EYC08Eeyj39e71X-coQ" entityName="Processing Time Camera - BrakingControl Critical Impact">
+        <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_TSIWVC08Eeyj39e71X-coQ" signature="__YfNECnzEeywQ_wyQlQHQw" qualitygate="_CZqkYC08Eeyj39e71X-coQ"/>
+        <predicate specification="ProcessingTime.VALUE &lt; 0.5"/>
+        <severity href="My.severityhierarchy#_Lx-NAC07Eeyj39e71X-coQ"/>
+      </qualitygate>
+      <qualitygate id="_lLlj0C0_Eeyj39e71X-coQ" entityName="Processing Time Lidar - BrakingControl NoImpact">
+        <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_p4taRC0_Eeyj39e71X-coQ" signature="__YfNECnzEeywQ_wyQlQHQw" qualitygate="_XL584C0_Eeyj39e71X-coQ"/>
+        <predicate specification="ProcessingTime.VALUE &lt; 0.1"/>
       </qualitygate>
     </stereotypeApplications>
     <importedProfiles nsURI="http://www.palladiosimulator.org/qualitygateprofile/1.0" location="platform:/resource/org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram"/>
