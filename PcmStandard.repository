@@ -426,16 +426,17 @@
     </stereotypeApplications>
     <stereotypeApplications xsi:type="org.palladiosimulator.qualitygate:QualitygateElement" appliedTo="_m6csgSnVEeywQ_wyQlQHQw">
       <extension href="../org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram#_HKHIQBLoEeyoI8sXJPqmjw"/>
-      <qualitygate id="_gqO5kCxwEeyz8pshM-h9jQ" entityName="Processing Time Lidar - BrakingControl Minor Impact">
+      <qualitygate id="_gqO5kCxwEeyz8pshM-h9jQ" entityName="Processing Time Lidar - BrakingControl Significant">
         <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_hgelFCxwEeyz8pshM-h9jQ" signature="__YfNECnzEeywQ_wyQlQHQw" qualitygate="_gVFwACxwEeyz8pshM-h9jQ"/>
         <predicate specification="ProcessingTime.VALUE &lt; 0.15"/>
+        <severity href="My.severityhierarchy#_vmysYCd2EeyJ9I_d773-6w"/>
       </qualitygate>
-      <qualitygate id="_3jNqMCx1Eeyz8pshM-h9jQ" entityName="Processing Time Camera - BrakingControl Minor Impact">
+      <qualitygate id="_3jNqMCx1Eeyz8pshM-h9jQ" entityName="Processing Time Camera - BrakingControl Significant">
         <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_39B4ZCx1Eeyz8pshM-h9jQ" signature="__YfNECnzEeywQ_wyQlQHQw" qualitygate="_wfH8YCx1Eeyz8pshM-h9jQ"/>
         <predicate specification="ProcessingTime.VALUE &lt; 0.15"/>
         <severity href="My.severityhierarchy#_vmysYCd2EeyJ9I_d773-6w"/>
       </qualitygate>
-      <qualitygate id="_td9RYC05Eeyj39e71X-coQ" entityName="Processing Time Camera - BrakingControl NoImpact">
+      <qualitygate id="_td9RYC05Eeyj39e71X-coQ" entityName="Processing Time Camera - BrakingControl Marginal">
         <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_0KQxVC05Eeyj39e71X-coQ" signature="__YfNECnzEeywQ_wyQlQHQw" qualitygate="_oD1yEC05Eeyj39e71X-coQ"/>
         <predicate specification="ProcessingTime.VALUE &lt; 0.1"/>
         <severity href="My.severityhierarchy#_tRawcCd2EeyJ9I_d773-6w"/>
@@ -448,6 +449,14 @@
       <qualitygate id="_lLlj0C0_Eeyj39e71X-coQ" entityName="Processing Time Lidar - BrakingControl NoImpact">
         <scope xsi:type="qualitygate:EventBasedCommunicationScope" id="_p4taRC0_Eeyj39e71X-coQ" signature="__YfNECnzEeywQ_wyQlQHQw" qualitygate="_XL584C0_Eeyj39e71X-coQ"/>
         <predicate specification="ProcessingTime.VALUE &lt; 0.1"/>
+        <severity href="My.severityhierarchy#_tRawcCd2EeyJ9I_d773-6w"/>
+      </qualitygate>
+    </stereotypeApplications>
+    <stereotypeApplications xsi:type="org.palladiosimulator.qualitygate:QualitygateElement" appliedTo="_76J7sSbXEeynLPSQFkGOPQ">
+      <extension href="../org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram#_HKHIQBLoEeyoI8sXJPqmjw"/>
+      <qualitygate id="_316hYC6yEey2M91Sp_rbxw" entityName="Image Number Of Objects">
+        <scope xsi:type="qualitygate:RequestParameterScope" id="_4LkBQC6yEey2M91Sp_rbxw" signature="_zW1cgCbnEeynLPSQFkGOPQ"/>
+        <predicate specification="image.Objects.NUMBER_OF_ELEMENTS &lt; 8"/>
       </qualitygate>
     </stereotypeApplications>
     <importedProfiles nsURI="http://www.palladiosimulator.org/qualitygateprofile/1.0" location="platform:/resource/org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram"/>

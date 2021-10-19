@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <severityhierarchy:SeverityRepository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:severityhierarchy="http://palladiosimulator.org/severityhierarchy/1.0" id="_svYaYCd2EeyJ9I_d773-6w">
-  <severity id="_tRawcCd2EeyJ9I_d773-6w" entityName="No Impact"/>
-  <severity id="_vmysYCd2EeyJ9I_d773-6w" entityName="Minor Impact"/>
-  <severity id="_LXsEwC07Eeyj39e71X-coQ" entityName="Significant Impact"/>
-  <severity id="_Lx-NAC07Eeyj39e71X-coQ" entityName="Critical Impact"/>
+  <severity id="_tRawcCd2EeyJ9I_d773-6w" entityName="Marginal"/>
+  <severity id="_vmysYCd2EeyJ9I_d773-6w" entityName="Signifcant"/>
+  <severity id="_Lx-NAC07Eeyj39e71X-coQ" entityName="Critical"/>
 </severityhierarchy:SeverityRepository>

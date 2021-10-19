@@ -133,4 +133,11 @@
     </measurementSpecifications>
     <measuringPoint xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" href="My.measuringpoint#//@measuringPoints.16"/>
   </monitors>
+  <monitors id="_HBprwC6zEey2M91Sp_rbxw">
+    <measurementSpecifications id="_HybocC6zEey2M91Sp_rbxw" triggersSelfAdaptations="false">
+      <metricDescription xsi:type="metricspec:TextualBaseMetricDescription" href="../../plugin/org.palladiosimulator.simulizar.qualitygate/model/qualitygate.metricspec#_biPckAJhEeyupI8CZJs1wg"/>
+      <processingType xsi:type="monitorrepository:FeedThrough" id="_K-vzcC6zEey2M91Sp_rbxw"/>
+    </measurementSpecifications>
+    <measuringPoint xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" href="My.measuringpoint#//@measuringPoints.17"/>
+  </monitors>
 </monitorrepository:MonitorRepository>

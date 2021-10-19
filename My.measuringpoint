@@ -51,4 +51,7 @@
   <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Image Complexity" resourceURIRepresentation="_7jonEC1DEeyj39e71X-coQ">
     <qualitygate href="PcmStandard.repository#_7jonEC1DEeyj39e71X-coQ"/>
   </measuringPoints>
+  <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Image Number Of Objects" resourceURIRepresentation="_316hYC6yEey2M91Sp_rbxw">
+    <qualitygate href="PcmStandard.repository#_316hYC6yEey2M91Sp_rbxw"/>
+  </measuringPoints>
 </org.palladiosimulator.edp2.models:MeasuringPointRepository>
