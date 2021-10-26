@@ -459,6 +459,14 @@
         <predicate specification="image.Objects.NUMBER_OF_ELEMENTS &lt; 8"/>
       </qualitygate>
     </stereotypeApplications>
+    <stereotypeApplications xsi:type="org.palladiosimulator.qualitygate:QualitygateElement" appliedTo="__gM3hSbmEeynLPSQFkGOPQ">
+      <extension href="../org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram#_HKGhNBLoEeyoI8sXJPqmjw"/>
+      <qualitygate id="_QQFRQDT1EeyzuuMSJGRE4A" entityName="Sensor at RequiredRole Camera for self adaptation">
+        <scope xsi:type="qualitygate:RequestParameterScope" id="_QpeBoDT1EeyzuuMSJGRE4A" signature="_7Lx_gCbnEeynLPSQFkGOPQ"/>
+        <predicate specification="image.DEGREE_OF_CORRUPTION.VALUE &lt; 0.2"/>
+        <impact xsi:type="failuretype:SWCrashFailure" href="My.failuretype#_eq_XICe5Eey2vvABLJYRXg"/>
+      </qualitygate>
+    </stereotypeApplications>
     <importedProfiles nsURI="http://www.palladiosimulator.org/qualitygateprofile/1.0" location="platform:/resource/org.palladiosimulator.qualitygateprofile/profile.emfprofile_diagram"/>
   </emfprofileapplication:ProfileApplication>
 </xmi:XMI>

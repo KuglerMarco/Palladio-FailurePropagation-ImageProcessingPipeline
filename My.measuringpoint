@@ -15,16 +15,16 @@
   <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Processing Time Lidar - BrakingControl Minor Impact Start" resourceURIRepresentation="_gVFwACxwEeyz8pshM-h9jQ">
     <qualitygate href="PcmStandard.repository#_gVFwACxwEeyz8pshM-h9jQ"/>
   </measuringPoints>
-  <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Processing Time Lidar - BrakingControl Minor Impact" resourceURIRepresentation="_gqO5kCxwEeyz8pshM-h9jQ">
+  <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Processing Time Lidar - BrakingControl Significant" resourceURIRepresentation="_gqO5kCxwEeyz8pshM-h9jQ">
     <qualitygate href="PcmStandard.repository#_gqO5kCxwEeyz8pshM-h9jQ"/>
   </measuringPoints>
   <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Processing Time Camera - BrakingControl Minor Impact Start" resourceURIRepresentation="_wfH8YCx1Eeyz8pshM-h9jQ">
     <qualitygate href="PcmStandard.repository#_wfH8YCx1Eeyz8pshM-h9jQ"/>
   </measuringPoints>
-  <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Processing Time Camera - BrakingControl Minor Impact" resourceURIRepresentation="_3jNqMCx1Eeyz8pshM-h9jQ">
+  <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Processing Time Camera - BrakingControl Significant" resourceURIRepresentation="_3jNqMCx1Eeyz8pshM-h9jQ">
     <qualitygate href="PcmStandard.repository#_3jNqMCx1Eeyz8pshM-h9jQ"/>
   </measuringPoints>
-  <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Processing Time Camera - BrakingControl NoImpact" resourceURIRepresentation="_td9RYC05Eeyj39e71X-coQ">
+  <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Processing Time Camera - BrakingControl Marginal" resourceURIRepresentation="_td9RYC05Eeyj39e71X-coQ">
     <qualitygate href="PcmStandard.repository#_td9RYC05Eeyj39e71X-coQ"/>
   </measuringPoints>
   <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Processing Time Camera - BrakingControl NoImpact Start" resourceURIRepresentation="_oD1yEC05Eeyj39e71X-coQ">
@@ -53,5 +53,8 @@
   </measuringPoints>
   <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Image Number Of Objects" resourceURIRepresentation="_316hYC6yEey2M91Sp_rbxw">
     <qualitygate href="PcmStandard.repository#_316hYC6yEey2M91Sp_rbxw"/>
+  </measuringPoints>
+  <measuringPoints xsi:type="qualitygatemeasuringpoint:QualitygateMeasuringPoint" stringRepresentation="Sensor at RequiredRole Camera for self adaptation" resourceURIRepresentation="_QQFRQDT1EeyzuuMSJGRE4A">
+    <qualitygate href="PcmStandard.repository#_QQFRQDT1EeyzuuMSJGRE4A"/>
   </measuringPoints>
 </org.palladiosimulator.edp2.models:MeasuringPointRepository>
